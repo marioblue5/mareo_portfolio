@@ -4,11 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Drake - OnePage Portfolio HTML5 Template</title>
+    <title>Mario Molina - Biosystems & Computer Vision Engineer</title>
 
     <link rel="icon" type="image/x-icon" href="./assets/images/favicon.png">
-
-
 
     <!-- Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,13 +24,153 @@
 
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/responsive.css">
+    
+    <style>
+    /* Enhanced lightbox caption styling */
+    .lb-caption {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        padding: 25px 30px !important;
+        background: transparent !important;
+        color: #ffffff !important;
+        max-width: 800px !important;
+        max-height: 300px !important;
+        margin: 15px auto !important;
+        border-radius: 8px !important;
+        box-shadow: none !important;
+        overflow-y: auto !important;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
+    }
+    
+    /* Make sure lightbox captions are readable */
+    .lb-caption strong {
+        color: #28e98c !important;
+        font-weight: 600 !important;
+        font-size: 18px !important;
+    }
+    
+    /* Make lightbox navigation arrows more visible */
+    .lb-nav a.lb-prev,
+    .lb-nav a.lb-next {
+        width: 50px !important;
+        height: 50px !important;
+        background: rgba(40, 233, 140, 0.8) !important;
+        border-radius: 50% !important;
+        opacity: 0.9 !important;
+        transition: all 0.3s ease !important;
+        position: absolute !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        z-index: 10 !important;
+    }
+    
+    .lb-nav a.lb-prev {
+        left: -70px !important;
+    }
+    
+    .lb-nav a.lb-next {
+        right: -70px !important;
+    }
+    
+    .lb-nav a.lb-prev:hover,
+    .lb-nav a.lb-next:hover {
+        opacity: 1 !important;
+        background: rgba(40, 233, 140, 1) !important;
+        transform: translateY(-50%) scale(1.1) !important;
+    }
+    
+    /* Arrow icons */
+    .lb-nav a.lb-prev::before {
+        content: '‹' !important;
+        font-size: 24px !important;
+        color: white !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        line-height: 1 !important;
+        font-weight: bold !important;
+    }
+    
+    .lb-nav a.lb-next::before {
+        content: '›' !important;
+        font-size: 24px !important;
+        color: white !important;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        line-height: 1 !important;
+        font-weight: bold !important;
+    }
+    
+    /* Make sure navigation is visible on smaller screens */
+    @media (max-width: 768px) {
+        .lb-nav a.lb-prev {
+            left: 10px !important;
+        }
+        
+        .lb-nav a.lb-next {
+            right: 10px !important;
+        }
+    }
+    
+    /* Portfolio categories hover effect */
+    .portfolio-categories li a:hover {
+        color: var(--primary_color);
+        transition: color 0.3s ease;
+    }
+    
+    /* Portfolio item hover effects */
+    .portfolio-item-inner {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .portfolio-item-inner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(40, 233, 140, 0.8);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 1;
+        pointer-events: none; /* This allows clicks to pass through! */
+    }
+    
+    .portfolio-item-inner:hover::before {
+        opacity: 1;
+    }
+    
+    .portfolio-item-inner::after {
+        content: 'View Details';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        z-index: 2;
+        pointer-events: none;
+    }
+    
+    .portfolio-item-inner:hover::after {
+        opacity: 1;
+    }
+    </style>
 
 </head>
 <body class="home1-page">
 
-   <!--  <video class="body-overlay" muted autoplay loop>
-        <source src="./assets/images/video1.mp4" type="video/mp4">
-    </video> -->
+   <video class="body-overlay" muted autoplay loop>
+        <source src="./assets/images/forest1.mp4" type="video/mp4">
+    </video>
 
     <!-- Preloader -->
     <div class="page-loader">
@@ -67,11 +205,6 @@
                         </a>
                     </li>
                     <li>
-                        <a class="scroll-to" href="#services">
-                            <i class="las la-stream"></i> <span>Services</span>
-                        </a>
-                    </li>
-                    <li>
                         <a class="scroll-to" href="#skills">
                             <i class="las la-shapes"></i> <span>Skills</span>
                         </a>
@@ -82,11 +215,6 @@
                         </a>
                     </li>
                     <li>
-                        <a class="scroll-to" href="#testimonial">
-                            <i class="lar la-comment"></i> <span>Testimonial</span>
-                        </a>
-                    </li>
-                    <li>
                         <a class="scroll-to" href="#contact">
                             <i class="las la-envelope"></i> <span>Contact</span>
                         </a>
@@ -94,18 +222,14 @@
                 </ul>
             </div>
 
-
             <div class="sidebar-social">
                 <p>Social</p>
                 <ul class="social-links d-flex align-items-center">
                     <li>
-                        <a href=""><i class="lab la-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/mario-molina-226628256/"><i class="lab la-linkedin"></i></a>
                     </li>
                     <li>
-                        <a href=""><i class="lab la-dribbble"></i></a>
-                    </li>
-                    <li>
-                        <a href=""><i class="lab la-instagram"></i></a>
+                        <a href="https://github.com/marioblue5"><i class="lab la-github"></i></a>
                     </li>
                 </ul>
             </div>
@@ -144,11 +268,6 @@
             </a>
         </li>
         <li>
-            <a class="scroll-to" href="#testimonial">
-                <span>Testimonial</span> <i class="lar la-comment"></i>
-            </a>
-        </li>
-        <li>
             <a class="scroll-to" href="#contact">
                 <span>Contact</span> <i class="las la-envelope"></i>
             </a>
@@ -158,29 +277,18 @@
     <div class="left-sidebar">
         <div class="sidebar-header d-flex align-items-center justify-content-between">
             <img src="./assets/images/logo.png" alt="Logo">
-            <span class="designation">Framer Designer & Developer</span>
+            <span class="designation">Biosystems & Computer Vision Engineer</span>
         </div>
-        <img class="me" src="./assets/images/me.jpg" alt="Me">
-        <h2 class="email">hello@drake.design</h2>
-        <h2 class="address">Base in Los Angeles, CA</h2>
-        <p class="copyright">&copy; 2022 Drake. All Rights Reserved</p>
+        <img class="me" src="./assets/images/headshot.jpg" alt="Me">
+        <h2 class="email">pmariolmolina@gmail.com</h2>
         <ul class="social-profile d-flex align-items-center flex-wrap justify-content-center">
             <li>
-                <a href=""><i class="lab la-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/mario-molina-226628256/"><i class="lab la-linkedin"></i></a>
             </li>
             <li>
-                <a href=""><i class="lab la-dribbble"></i></a>
-            </li>
-            <li>
-                <a href=""><i class="lab la-instagram"></i></a>
-            </li>
-            <li>
-                <a href=""><i class="lab la-github"></i></a>
+                <a href="https://github.com/marioblue5"><i class="lab la-github"></i></a>
             </li>
         </ul>
-        <a href="#" class="theme-btn">
-            <i class="las la-envelope"></i> Hire Me!
-        </a>
     </div>
     <!-- Main Section -->
     <main class="drake-main">
@@ -190,24 +298,16 @@
                 <div class="left-sidebar">
                     <div class="sidebar-header d-flex align-items-center justify-content-between">
                         <img src="./assets/images/logo.png" alt="Logo">
-                        <span class="designation">Framer Designer & Developer</span>
+                        <span class="designation">Biosystems & Computer Vision Engineer</span>
                     </div>
-                    <img class="me" src="./assets/images/me.jpg" alt="Me">
-                    <h2 class="email">hello@drake.design</h2>
-                    <h2 class="address">Base in Los Angeles, CA</h2>
-                    <p class="copyright">&copy; 2022 Drake. All Rights Reserved</p>
+                    <img class="me" src="./assets/images/headshot.jpg" alt="Me">
+                    <h2 class="email">pmariolmolina@gmail.com</h2>
                     <ul class="social-profile d-flex align-items-center flex-wrap justify-content-center">
                         <li>
-                            <a href=""><i class="lab la-twitter"></i></a>
+                            <a href="https://www.linkedin.com/in/mario-molina-226628256/"><i class="lab la-linkedin"></i></a>
                         </li>
                         <li>
-                            <a href=""><i class="lab la-dribbble"></i></a>
-                        </li>
-                        <li>
-                            <a href=""><i class="lab la-instagram"></i></a>
-                        </li>
-                        <li>
-                            <a href=""><i class="lab la-github"></i></a>
+                            <a href="https://github.com/marioblue5"><i class="lab la-github"></i></a>
                         </li>
                     </ul>
                     <a href="#" class="theme-btn">
@@ -224,9 +324,9 @@
                                 <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
                                     <i class="las la-home"></i> Introduce
                                 </h4>
-                                <h1 class="scroll-animation" data-animation="fade_from_bottom">Say Hi from <span>Drake</span>, Framer Designer and Developer</h1>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom">Hi, I'm <span>Mario</span>! Biosystems & Computer Vision Engineer</h1>
                             </div>
-                            <p class="scroll-animation" data-animation="fade_from_bottom">I design and code beautifully simple things and i love what i do. Just simple like that!</p>
+                            <p class="scroll-animation" data-animation="fade_from_bottom">I create and learn things, all the way from Hydroponics to Computer Vision Machine Learning</p>
                             <a href="#portfolio" 
                                 class="go-to-project-btn scroll-to scroll-animation" 
                                 data-animation="rotate_up">
@@ -235,13 +335,20 @@
                             </a>
         
                             <div class="facts d-flex">
-                                <div class="left scroll-animation" data-animation="fade_from_left">
-                                    <h1>10+</h1>
+                                <div class="left scroll-animation" data-animation="fade_from_right">
+                                    <h1>2+</h1>
                                     <p>Years of <br>Experience</p>
                                 </div>
                                 <div class="right scroll-animation" data-animation="fade_from_right">
-                                    <h1>182+</h1>
-                                    <p>projects completed on <br>15 countries</p>
+                                    <h1>2x NASA Intern</h1>
+                                    <p>Space Crop Production</p>
+                                </div>
+                            </div>
+                            <div class="facts d-flex">
+                                <div class="left scroll-animation" data-animation="fade_from_right">
+                                    <h1 style="line-height: 1.1;">2025 National Preprofessional Engineer of the Year</h1>
+
+                                    <p>Awarded to me by the American Society of Agricultural and Biological Engineers</p>
                                 </div>
                             </div>
                         </div>
@@ -256,14 +363,13 @@
                                 <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
                                     <i class="lar la-user"></i> About
                                 </h4>
-                                <h1 class="scroll-animation" data-animation="fade_from_bottom">Every great design begin with<br>
-                                    an even <span>better story</span></h1>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom"> Just an engineer passionate <br>about making
+                                    an <span>impact</span></h1>
                             </div>
-                            <p class="scroll-animation" data-animation="fade_from_bottom">Since beginning my journey as a freelance designer nearly 8 years ago, 
-                                I've done remote work for agencies, consulted for startups, and collaborated with 
-                                talented people to create digital products for both business and consumer use. 
-                                I'm quietly confident, naturally curious, and perpetually working on improving my 
-                                chopsone design problem at a time.</p>
+                            <p class="scroll-animation" data-animation="fade_from_bottom">I'm Mario — an engineer with one foot
+                                 in plant science and the other in space tech. I've built autonomous gantry robots to 3-D scan lettuce, 
+                                 tuned life-support sensors for NASA-style grow chambers, and wrangled Python and MATLAB to turn messy data into 
+                                 clean insights. When the soldering iron cools, you'll catch me volleying on the court, hunting vintage manga, or setting out on extra-long hikes. I thrive where nature, tech, and a dash of adventure collide.</p>
                         </div>
                     </div>
                 </section>
@@ -281,25 +387,25 @@
         
                             <div class="resume-timeline">
                                 <div class="item scroll-animation" data-animation="fade_from_right">
-                                    <span class="date">2020 - Present</span>
-                                    <h2>Framer Desinger & Developer</h2>
-                                    <p>Brunodee Agency</p>
-                                    <h2>Front-End WordPress Developer</h2>
-                                    <p>Envato Market</p>
+                                    <span class="date">Jan 2025 - Present</span>
+                                    <h2>Prototype Engineer Intern</h2>
+                                    <p>NASA: Space Crop Production</p>
                                 </div>
                                 <div class="item scroll-animation" data-animation="fade_from_right">
-                                    <span class="date">2013 - 2019</span>
-                                    <h2>Webflow Developer & Co-Founder</h2>
-                                    <p>Designflow Studio</p>
-                                    <h2>Web Designer</h2>
-                                    <p>Freelance</p>
-                                    <h2>Leader Team of Marketing</h2>
-                                    <p>AHA Marketing Agency</p>
+                                    <span class="date">Aug 2023 - Dec 2024</span>
+                                    <h2>Robotics Research Engineer</h2>
+                                    <p>University of Florida</p>
                                 </div>
                                 <div class="item scroll-animation" data-animation="fade_from_right">
-                                    <span class="date">2010 - 2013</span>
-                                    <h2>Bachelor Degree of Information Technology</h2>
-                                    <p>US RMIT University</p>
+                                    <span class="date">March 2021 - Dec 2023</span>
+                                    <h2>Controlled Environment Engineer</h2>
+                                    <p>University of Florida</p>
+                                </div>
+                                <div class="item scroll-animation" data-animation="fade_from_right">
+                                    <span class="date">2021 - 2025</span>
+                                    <h2>Bachelor Degree of Agricultural & Biological Engineering</h2>
+                                    <h2> Minor in Electrical Engineering</h2>
+                                    <p>University of Florida</p>
                                 </div>
                             </div>
         
@@ -307,41 +413,6 @@
                     </div>
                 </section>
         
-                <!-- Services Section -->
-                <section class="services-area page-section scroll-to-page" id="services">
-                    <div class="custom-container">
-                        <div class="services-content content-width">
-                            <div class="section-header">
-                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                    <i class="las la-stream"></i> Services
-                                </h4>
-                                <h1 class="scroll-animation" data-animation="fade_from_bottom">My <span>Specializations</span></h1>
-                            </div>
-        
-                            <div class="services-items">
-                                <div class="service-item scroll-animation" data-animation="fade_from_bottom">
-                                    <i class="las la-bezier-curve"></i>
-                                    <h2>Website Design</h2>
-                                    <p>I created digital products with unique ideas use Figma & Framer</p>
-                                    <span class="projects">24 Projects</span>
-                                </div>
-                                <div class="service-item scroll-animation" data-animation="fade_from_bottom">
-                                    <i class="las la-code"></i>
-                                    <h2>Development</h2>
-                                    <p>I build website go live with Framer, Webflow or WordPress</p>
-                                    <span class="projects">126 Projects</span>
-                                </div>
-                                <div class="service-item scroll-animation" data-animation="fade_from_bottom">
-                                    <i class="las la-bezier-curve"></i>
-                                    <h2>SEO/Marketing</h2>
-                                    <p>Increase the traffic for your website with SEO optimized</p>
-                                    <span class="projects">8 Projects</span>
-                                </div>
-                            </div>
-        
-                        </div>
-                    </div>
-                </section>
         
                 <!-- Skills Section -->
                 <section class="skills-area page-section scroll-to-page" id="skills">
@@ -359,54 +430,48 @@
                                     <div class="skill">
                                         <div class="skill-inner">
                                             <img src="./assets/images/figma.png" alt="Figma">
-                                            <h1 class="percent">92%</h1>
                                         </div>
-                                        <p class="name">Figma</p>
+                                        <p class="name">Python</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3 scroll-animation" data-animation="fade_from_bottom">
                                     <div class="skill">
                                         <div class="skill-inner">
                                             <img src="./assets/images/framer.png" alt="Framer">
-                                            <h1 class="percent">85%</h1>
                                         </div>
-                                        <p class="name">Framer</p>
+                                        <p class="name">Matlab</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3 scroll-animation" data-animation="fade_from_top">
                                     <div class="skill">
                                         <div class="skill-inner">
                                             <img src="./assets/images/webflow.png" alt="Webflow">
-                                            <h1 class="percent">80%</h1>
                                         </div>
-                                        <p class="name">Webflow</p>
+                                        <p class="name">Git</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3 scroll-animation" data-animation="fade_from_right">
                                     <div class="skill">
                                         <div class="skill-inner">
                                             <img src="./assets/images/react.png" alt="React">
-                                            <h1 class="percent">90%</h1>
                                         </div>
-                                        <p class="name">React</p>
+                                        <p class="name">SLAM</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
                                     <div class="skill">
                                         <div class="skill-inner">
                                             <img src="./assets/images/wordpress.png" alt="WordPress">
-                                            <h1 class="percent">86%</h1>
                                         </div>
-                                        <p class="name">WordPress</p>
+                                        <p class="name">Oscilloscopes</p>
                                     </div>
                                 </div>
                                 <div class="col-md-3 scroll-animation" data-animation="fade_from_bottom">
                                     <div class="skill">
                                         <div class="skill-inner">
                                             <img src="./assets/images/laravel.png" alt="Laravel/PHP">
-                                            <h1 class="percent">70%</h1>
                                         </div>
-                                        <p class="name">Laravel/PHP</p>
+                                        <p class="name">Embedded Systems</p>
                                     </div>
                                 </div>
                             </div>
@@ -415,7 +480,7 @@
                     </div>
                 </section>
         
-                <!-- Portfolio Section -->
+                <!-- Enhanced Portfolio Section with Detailed Lightbox Captions -->
                 <section class="portfolio-area page-section scroll-to-page" id="portfolio">
                     <div class="custom-container">
                         <div class="portfolio-content content-width">
@@ -425,288 +490,185 @@
                                 </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom">Featured <span>Projects</span></h1>
                             </div>
-        
+
                             <div class="row portfolio-items">
+                                <!-- Project 1: Autonomous Gantry Robot -->
                                 <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
                                     <div class="portfolio-item portfolio-full">
                                         <div class="portfolio-item-inner">
-                                            <a href="./assets/images/portfolio1.jpg" data-lightbox="example-1">
-                                                <img src="./assets/images/portfolio1.jpg" alt="Portfolio">
+                                            <!-- Main visible image -->
+                                            <a href="./assets/images/portfolio1.jpg" 
+                                               data-lightbox="gantry-robot" 
+                                               data-title="<strong>🤖 Autonomous Gantry Robot for 3D Plant Scanning</strong><br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems">
+                                                <img src="./assets/images/portfolio1.jpg" alt="Autonomous Gantry Robot">
                                             </a>
-        
+                                            
+                                            <!-- Additional images for this project (same description) -->
+                                            <a href="./assets/images/portfolio2.jpg" 
+                                               data-lightbox="gantry-robot" 
+                                               data-title="<strong>🤖 Autonomous Gantry Robot for 3D Plant Scanning</strong><br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems"
+                                               style="display: none;"></a>
+                                               
+                                            <a href="./assets/images/portfolio3.jpg" 
+                                               data-lightbox="gantry-robot" 
+                                               data-title="<strong>🤖 Autonomous Gantry Robot for 3D Plant Scanning</strong><br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems"
+                                               style="display: none;"></a>
+                                               
+                                            <a href="./assets/images/portfolio4.jpg" 
+                                               data-lightbox="gantry-robot" 
+                                               data-title="<strong>🤖 Autonomous Gantry Robot for 3D Plant Scanning</strong><br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems"
+                                               style="display: none;"></a>
+
                                             <ul class="portfolio-categories">
-                                                <li>
-                                                    <a href="">Figma</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Framer</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">WordPress</a>
-                                                </li>
+                                                <li><a href="">Python</a></li>
+                                                <li><a href="">ROS</a></li>
+                                                <li><a href="">Computer Vision</a></li>
+                                                <li><a href="">SLAM</a></li>
                                             </ul>
                                         </div>
-                                        <h2><a href="">Bureau - Architecture Studio Website</a></h2>
+                                        <h2><a href="">Autonomous Gantry Robot for 3D Plant Scanning</a></h2>
                                     </div>
                                 </div>
-        
+
+                                <!-- Project 2: NASA Life Support Sensors -->
                                 <div class="col-md-6 scroll-animation" data-animation="fade_from_left">
                                     <div class="portfolio-item portfolio-half">
                                         <div class="portfolio-item-inner">
-                                            <a href="./assets/images/portfolio2.jpg" data-lightbox="example-1">
-                                                <img src="./assets/images/portfolio2.jpg" alt="Portfolio">
+                                            <!-- Main visible image -->
+                                            <a href="./assets/images/portfolio2.jpg" 
+                                               data-lightbox="nasa-sensors"
+                                               data-title="<strong>🚀 NASA Space Crop Production - Life Support Sensors</strong><br><br>Critical environmental monitoring systems for NASA's controlled environment agriculture programs. These precision sensors ensure optimal growing conditions for space-based crop production, supporting long-duration missions and astronaut food security.<br><br>Key Responsibilities:<br>• Calibration of CO2, humidity, and pressure sensors<br>• Environmental control system optimization<br>• Data validation for space agriculture research<br>• Sensor reliability testing for extreme conditions<br><br>Technologies: Embedded Systems, Sensor Calibration, NASA Standards">
+                                                <img src="./assets/images/portfolio2.jpg" alt="NASA Life Support Sensors">
                                             </a>
+                                            
+                                            <!-- Additional images for NASA project (same description) -->
+                                            <a href="./assets/images/portfolio1.jpg" 
+                                               data-lightbox="nasa-sensors" 
+                                               data-title="<strong>🚀 NASA Space Crop Production - Life Support Sensors</strong><br><br>Critical environmental monitoring systems for NASA's controlled environment agriculture programs. These precision sensors ensure optimal growing conditions for space-based crop production, supporting long-duration missions and astronaut food security.<br><br>Key Responsibilities:<br>• Calibration of CO2, humidity, and pressure sensors<br>• Environmental control system optimization<br>• Data validation for space agriculture research<br>• Sensor reliability testing for extreme conditions<br><br>Technologies: Embedded Systems, Sensor Calibration, NASA Standards"
+                                               style="display: none;"></a>
+                                               
+                                            <a href="./assets/images/portfolio5.jpg" 
+                                               data-lightbox="nasa-sensors" 
+                                               data-title="<strong>🚀 NASA Space Crop Production - Life Support Sensors</strong><br><br>Critical environmental monitoring systems for NASA's controlled environment agriculture programs. These precision sensors ensure optimal growing conditions for space-based crop production, supporting long-duration missions and astronaut food security.<br><br>Key Responsibilities:<br>• Calibration of CO2, humidity, and pressure sensors<br>• Environmental control system optimization<br>• Data validation for space agriculture research<br>• Sensor reliability testing for extreme conditions<br><br>Technologies: Embedded Systems, Sensor Calibration, NASA Standards"
+                                               style="display: none;"></a>
 
-                                            <img src="./assets/images/portfolio2.jpg" alt="Portfolio">
-        
                                             <ul class="portfolio-categories">
-                                                <li>
-                                                    <a href="">WordPress</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Larevel/PHP</a>
-                                                </li>
+                                                <li><a href="">NASA</a></li>
+                                                <li><a href="">Embedded Systems</a></li>
+                                                <li><a href="">Sensor Calibration</a></li>
                                             </ul>
                                         </div>
-                                        <h2><a href="">Moonex WordPress Theme</a></h2>
+                                        <h2><a href="">NASA Life Support Sensor Systems</a></h2>
                                     </div>
                                 </div>
-        
+
+                                <!-- Project 3: Hydroponic Control System -->
                                 <div class="col-md-6 scroll-animation" data-animation="fade_from_right">
                                     <div class="portfolio-item portfolio-half">
                                         <div class="portfolio-item-inner">
-                                            <a href="./assets/images/portfolio3.jpg" data-lightbox="example-1">
-                                                <img src="./assets/images/portfolio3.jpg" alt="Portfolio">
+                                            <!-- Main visible image -->
+                                            <a href="./assets/images/portfolio3.jpg" 
+                                               data-lightbox="hydroponic-system"
+                                               data-title="<strong>🌱 Advanced Hydroponic Control System</strong><br><br>A comprehensive smart agriculture platform that automates hydroponic growing operations through intelligent monitoring and control. This system optimizes plant growth conditions using IoT sensors, machine learning algorithms, and automated feedback controls.<br><br>System Features:<br>• Real-time nutrient and pH monitoring<br>• Automated environmental control systems<br>• Machine learning growth optimization<br>• Smart irrigation and lighting management<br><br>Technologies: IoT Sensors, MATLAB, Machine Learning, Control Systems">
+                                                <img src="./assets/images/portfolio3.jpg" alt="Hydroponic Control System">
                                             </a>
-        
-                                            <ul class="portfolio-categories">
-                                                <li>
-                                                    <a href="">Figma</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">Webflow</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h2><a href="">Taskly Dashboard</a></h2>
-                                    </div>
-                                </div>
-        
-                                <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
-                                    <div class="portfolio-item portfolio-half">
-                                        <div class="portfolio-item-inner">
-                                            <a href="./assets/images/portfolio4.jpg" data-lightbox="example-1">
-                                                <img src="./assets/images/portfolio4.jpg" alt="portfolio">
-                                            </a>
-        
-                                            <ul class="portfolio-categories">
-                                                <li>
-                                                    <a href="">Figma</a>
-                                                </li>
-                                                <li>
-                                                    <a href="">React</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h2><a href="">Hinterland - Real Estate Site Redesign</a></h2>
-                                    </div>
-                                </div>
-        
-                                <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
-                                    <div class="portfolio-item portfolio-half">
-                                        <div class="portfolio-item-inner">
-                                            <a href="./assets/images/portfolio5.jpg" data-lightbox="example-1">
-                                                <img src="./assets/images/portfolio5.jpg" alt="portfolio">
-                                            </a>
-        
-                                            <ul class="portfolio-categories">
-                                                <li>
-                                                    <a href="">Framer</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <h2><a href="">Lewis Portfolio Framer Template</a></h2>
-                                    </div>
-                                </div>
-                            </div>
-        
-                        </div>
-                    </div>
-                </section>
-        
-                <!-- Testimonial Section -->
-                <section class="testimonial-area page-section scroll-to-page" id="testimonial">
-                    <div class="custom-container">
-                        <div class="testimonial-content content-width">
-                            <div class="section-header">
-                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                    <i class="lar la-comment"></i> testimonial
-                                </h4>
-                                <h1 class="scroll-animation" data-animation="fade_from_bottom">Trusted by <span>Hundered Clients</span></h1>
-                            </div>
-        
-                            <div class="testimonial-slider-wrap scroll-animation" data-animation="fade_from_bottom">
-                                <div class="owl-carousel testimonial-slider owl-theme">
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-item-inner">
-                                            <div class="author d-flex align-items-center">
-                                                <img src="./assets/images/testimonial-1.jpg" alt="portfolio">
-                                                <div class="right">
-                                                    <h3>Paublo Dybala</h3>
-                                                    <p class="designation">CEO of <span>IBM Global</span></p>
-                                                </div>
-                                            </div>
-                                            <p>“Drake - A Developer with the creativity, professional and 
-                                                master of code. Much more than what i'm expect. 
-                                                High quality product & flexiable price. Recommended!.”</p>
-        
-                                            <a href="" class="project-btn">Project</a>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-item-inner">
-                                            <div class="author d-flex align-items-center">
-                                                <img src="./assets/images/testimonial-2.jpg" alt="portfolio">
-                                                <div class="right">
-                                                    <h3>Christina Morillo</h3>
-                                                    <p class="designation">Product Management of <span>Invision App Inc</span></p>
-                                                </div>
-                                            </div>
-                                            <p>“Drake was a real pleasure to work with and we look 
-                                                forward to working with him again. He's definitely the kind of 
-                                                designer that you can trust with any project from A-Z.”</p>
-        
-                                            <a href="" class="project-btn">Project</a>
-                                        </div>
-                                    </div>
-                                    <div class="testimonial-item">
-                                        <div class="testimonial-item-inner">
-                                            <div class="author d-flex align-items-center">
-                                                <img src="./assets/images/testimonial-3.jpg" alt="portfolio">
-                                                <div class="right">
-                                                    <h3>Phil Foden</h3>
-                                                    <p class="designation">Director of <span>Envato LLC</span></p>
-                                                </div>
-                                            </div>
-                                            <p>“Extremely profressional and fast service!. Drake is a master
-                                                of code and he also very creative. We done 3 projects with
-                                                him and certain will continue.”</p>
-        
-                                            <a href="" class="project-btn">Project</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="testimonial-footer-nav">
-                                    <div class="testimonial-nav d-flex align-items-center">
-                                        <button class="prev"><i class="las la-angle-left"></i></button>
-                                        <div id="testimonial-slide-count"></div>
-                                        <button class="next"><i class="las la-angle-right"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-        
-                            <div class="clients-logos">
-                                <h4 class="scroll-animation" data-animation="fade_from_bottom">work with 60+ brands worldwide</h4>
-                                <div class="row align-items-center">
-                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
-                                        <img src="./assets/images/client-1.png" alt="client">
-                                    </div>
-                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_bottom">
-                                        <img src="./assets/images/client-2.png" alt="client">
-                                    </div>
-                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_top">
-                                        <img src="./assets/images/client-3.png" alt="client">
-                                    </div>
-                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_right">
-                                        <img src="./assets/images/client-4.png" alt="client">
-                                    </div>
-                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
-                                        <img src="./assets/images/client-5.png" alt="client">
-                                    </div>
-                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_bottom">
-                                        <img src="./assets/images/client-6.png" alt="client">
-                                    </div>
-                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_top">
-                                        <img src="./assets/images/client-7.png" alt="client">
-                                    </div>
-                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_right">
-                                        <img src="./assets/images/client-8.png" alt="client">
-                                    </div>
-                                </div>
-                            </div>
-        
-                        </div>
-                    </div>
-                </section>
-        
-                <!-- Pricing Section -->
-                <section class="pricing-area page-section scroll-to-page" id="pricing">
-                    <div class="custom-container">
-                        <div class="pricing-content content-width">
-                            <div class="section-header">
-                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                    <i class="las la-dollar-sign"></i> pricing
-                                </h4>
-                                <h1 class="scroll-animation" data-animation="fade_from_bottom">My <span>Pricing</span></h1>
-                            </div>
-        
-                            <div class="pricing-table-items">
-                                <div class="row">
-                                    <div class="col-md-6 scroll-animation" data-animation="fade_from_left">
-                                        <div class="pricing-table">
-                                            <div class="pricing-table-header">
-                                                <div class="top d-flex justify-content-between align-items-start">
-                                                    <h4>basic</h4>
-                                                    <p class="text-right">Have design ready to build?<br>
-                                                        or small budget</p>
-                                                </div>
-                                                <h1>$69 <span>/ hour</span></h1>
-                                            </div>
-                                            <ul class="feature-lists">
-                                                <li>Need your wireframe</li>
-                                                <li>Design with Figma, Framer</li>
-                                                <li>Implement with Webflow, React, WordPress, Laravel/PHP</li>
-                                                <li>Remote/Online</li>
-                                                <li>Work in business days, no weekend.</li>
-                                                <li>Support 6 months</li>
-                                            </ul>
-                                            <a href="" class="theme-btn">pick this package</a>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6 scroll-animation" data-animation="fade_from_right">
-                                        <div class="pricing-table">
-                                            <div class="pricing-table-header">
-                                                <div class="top d-flex justify-content-between align-items-start">
-                                                    <h4>premium</h4>
-                                                    <p class="text-right">Not have any design?<br>
-                                                        Leave its for me</p>
-                                                </div>
-                                                <h1>$129 <span>/ hour</span></h1>
-                                            </div>
-                                            <ul class="feature-lists">
-                                                <li>Don't need wireframe or anything</li>
-                                                <li>Design with Figma, Framer from scratch</li>
-                                                <li>Implement with Webflow, React, WordPress, Laravel/PHP</li>
-                                                <li>Remote/Online</li>
-                                                <li>Work with both weekend</li>
-                                                <li>Support 12 months</li>
-                                                <li>Your project alway be priority</li>
-                                                <li>Customer care gifts</li>
-                                            </ul>
-                                            <a href="" class="theme-btn">pick this package</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="info scroll-animation" data-animation="fade_from_bottom">
-                                    Don't find any package match with your plan!<br>
-                                    Want to setup a new tailor-made package for only you?. <a href="">Contact Us</a>
-                                </p>
-                            </div>
-        
-                        </div>
-                    </div>
-                </section>
+                                            
+                                            <!-- Hidden additional images -->
+                                            <a href="./assets/images/portfolio4.jpg" 
+                                               data-lightbox="hydroponic-system" 
+                                               data-title="<strong>🌱 Advanced Hydroponic Control System</strong><br><br>A comprehensive smart agriculture platform that automates hydroponic growing operations through intelligent monitoring and control. This system optimizes plant growth conditions using IoT sensors, machine learning algorithms, and automated feedback controls.<br><br>System Features:<br>• Real-time nutrient and pH monitoring<br>• Automated environmental control systems<br>• Machine learning growth optimization<br>• Smart irrigation and lighting management<br><br>Technologies: IoT Sensors, MATLAB, Machine Learning, Control Systems"
+                                               style="display: none;"></a>
+                                               
+                                            <a href="./assets/images/portfolio1.jpg" 
+                                               data-lightbox="hydroponic-system" 
+                                               data-title="<strong>🌱 Advanced Hydroponic Control System</strong><br><br>A comprehensive smart agriculture platform that automates hydroponic growing operations through intelligent monitoring and control. This system optimizes plant growth conditions using IoT sensors, machine learning algorithms, and automated feedback controls.<br><br>System Features:<br>• Real-time nutrient and pH monitoring<br>• Automated environmental control systems<br>• Machine learning growth optimization<br>• Smart irrigation and lighting management<br><br>Technologies: IoT Sensors, MATLAB, Machine Learning, Control Systems"
+                                               style="display: none;"></a>
 
+                                            <ul class="portfolio-categories">
+                                                <li><a href="">IoT</a></li>
+                                                <li><a href="">MATLAB</a></li>
+                                                <li><a href="">Machine Learning</a></li>
+                                            </ul>
+                                        </div>
+                                        <h2><a href="">Smart Hydroponic Control System</a></h2>
+                                    </div>
+                                </div>
+
+                                <!-- Project 4: Computer Vision Plant Analysis -->
+                                <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="portfolio-item portfolio-half">
+                                        <div class="portfolio-item-inner">
+                                            <!-- Main visible image -->
+                                            <a href="./assets/images/portfolio4.jpg" 
+                                               data-lightbox="computer-vision"
+                                               data-title="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing">
+                                                <img src="./assets/images/portfolio4.jpg" alt="Computer Vision Plant Analysis">
+                                            </a>
+                                            
+                                            <!-- Hidden additional images -->
+                                            <a href="./assets/images/portfolio2.jpg" 
+                                               data-lightbox="computer-vision" 
+                                               data-title="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing"
+                                               style="display: none;"></a>
+                                               
+                                            <a href="./assets/images/portfolio5.jpg" 
+                                               data-lightbox="computer-vision" 
+                                               data-title="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing"
+                                               style="display: none;"></a>
+                                               
+                                            <a href="./assets/images/portfolio3.jpg" 
+                                               data-lightbox="computer-vision" 
+                                               data-title="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing"
+                                               style="display: none;"></a>
+
+                                            <ul class="portfolio-categories">
+                                                <li><a href="">Computer Vision</a></li>
+                                                <li><a href="">Machine Learning</a></li>
+                                                <li><a href="">Image Processing</a></li>
+                                            </ul>
+                                        </div>
+                                        <h2><a href="">Computer Vision Plant Phenotyping System</a></h2>
+                                    </div>
+                                </div>
+
+                                <!-- Project 5: Controlled Environment Research -->
+                                <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="portfolio-item portfolio-half">
+                                        <div class="portfolio-item-inner">
+                                            <!-- Main visible image -->
+                                            <a href="./assets/images/portfolio5.jpg" 
+                                               data-lightbox="research-platform"
+                                               data-title="<strong>🏢 Controlled Environment Agriculture Research Platform</strong><br><br>A comprehensive research facility designed for studying plant responses to various environmental conditions. This state-of-the-art platform enables precise control and monitoring of growing parameters to optimize agricultural outcomes for both terrestrial and space applications.<br><br>Research Capabilities:<br>• Precision climate control and monitoring<br>• Advanced data collection and analysis<br>• Real-time plant physiological tracking<br>• Environmental parameter optimization<br><br>Technologies: Environmental Control, Data Analysis, Research Systems">
+                                                <img src="./assets/images/portfolio5.jpg" alt="Controlled Environment Research">
+                                            </a>
+                                            
+                                            <!-- Hidden additional images -->
+                                            <a href="./assets/images/portfolio1.jpg" 
+                                               data-lightbox="research-platform" 
+                                               data-title="<strong>🏢 Controlled Environment Agriculture Research Platform</strong><br><br>A comprehensive research facility designed for studying plant responses to various environmental conditions. This state-of-the-art platform enables precise control and monitoring of growing parameters to optimize agricultural outcomes for both terrestrial and space applications.<br><br>Research Capabilities:<br>• Precision climate control and monitoring<br>• Advanced data collection and analysis<br>• Real-time plant physiological tracking<br>• Environmental parameter optimization<br><br>Technologies: Environmental Control, Data Analysis, Research Systems"
+                                               style="display: none;"></a>
+                                               
+                                            <a href="./assets/images/portfolio3.jpg" 
+                                               data-lightbox="research-platform" 
+                                               data-title="<strong>🏢 Controlled Environment Agriculture Research Platform</strong><br><br>A comprehensive research facility designed for studying plant responses to various environmental conditions. This state-of-the-art platform enables precise control and monitoring of growing parameters to optimize agricultural outcomes for both terrestrial and space applications.<br><br>Research Capabilities:<br>• Precision climate control and monitoring<br>• Advanced data collection and analysis<br>• Real-time plant physiological tracking<br>• Environmental parameter optimization<br><br>Technologies: Environmental Control, Data Analysis, Research Systems"
+                                               style="display: none;"></a>
+
+                                            <ul class="portfolio-categories">
+                                                <li><a href="">Environmental Control</a></li>
+                                                <li><a href="">Data Analysis</a></li>
+                                                <li><a href="">Research</a></li>
+                                            </ul>
+                                        </div>
+                                        <h2><a href="">Controlled Environment Research Platform</a></h2>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+        
+        
                 <!-- Contact Section -->
                 <section class="contact-area page-section scroll-content" id="contact">
                     <div class="custom-container">
@@ -715,9 +677,9 @@
                                 <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
                                     <i class="las la-dollar-sign"></i> contact
                                 </h4>
-                                <h1 class="scroll-animation" data-animation="fade_from_bottom">Let's Work <span>Together!</span></h1>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom">Let's Talk <span>:)</span></h1>
                             </div>
-                            <h3 class="scroll-animation" data-animation="fade_from_bottom">hello@drake.design</h3>
+                            <h3 class="scroll-animation" data-animation="fade_from_bottom">pmariolmolina@gmail.com</h3>
                             <p id="required-msg">* Marked fields are required to fill.</p>
 
                             <form class="contact-form scroll-animation" data-animation="fade_from_bottom" method="POST" action="mailer.php">
@@ -748,16 +710,10 @@
                                             <label for="subject">subject <sup>*</sup></label>
                                             <select name="subject" id="subject">
                                                 <option value="">Select a subject</option>
-                                                <option value="subject1">Subject 1</option>
-                                                <option value="subject2">Subject 2</option>
-                                                <option value="subject3">Subject 3</option>
+                                                <option value="subject1">Job Application</option>
+                                                <option value="subject2">Tag-up</option>
+                                                <option value="subject3">Contracting</option>
                                             </select>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="input-group">
-                                            <label for="budget">your budget <span>(optional)</span></label>
-                                            <input type="number" name="budget" id="budget" placeholder="A range budget for your project">
                                         </div>
                                     </div>
                                     <div class="col-md-12">
@@ -801,6 +757,7 @@
     <script src="./assets/js/ScrollTrigger.min.js"></script>
     <script src="./assets/js/ScrollToPlugin.min.js"></script>
     <script src="./assets/js/lightbox.min.js"></script>
+    <script src="./assets/js/lightbox-init.js"></script>
     
     <script src="./assets/js/main.js"></script>
     <script src="./assets/js/ajax-form.js"></script>

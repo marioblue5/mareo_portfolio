@@ -791,6 +791,10 @@ main.drake-main {
     line-height: 24px;
     text-transform: uppercase;
 }
+.hero-content .facts .left.scroll-animation {
+    line-height: 2
+}
+
 
 /* 08 - Home 3 */
 .home1-page,
