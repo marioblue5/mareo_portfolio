@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧪 Lightbox Test - Mario's Portfolio</title>
+    
+    <link rel="stylesheet" href="./assets/css/lightbox.min.css">
+    
+    <style>
+        body { 
+            padding: 50px; 
+            background: #1a1a1a; 
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .test-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        .test-item {
+            background: #2a2a2a;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .test-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .test-item img:hover {
+            transform: scale(1.05);
+        }
+        .test-item h3 {
+            margin: 15px 0 5px 0;
+            color: #28e98c;
+            font-size: 18px;
+        }
+        .test-item p {
+            font-size: 14px;
+            color: #999;
+            margin: 5px 0;
+        }
+        .instruction {
+            background: #333;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .success {
+            color: #28e98c;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="instruction">
+        <h1>🧪 Mario's Portfolio - Lightbox Test</h1>
+        <p><span class="success">✅ INSTRUCTIONS:</span> Click on any image below. If lightbox is working, you should see:</p>
+        <ul>
+            <li>🖼️ <strong>Full-screen image overlay</strong></li>
+            <li>📝 <strong>Project description</strong> below the image</li>
+            <li>🔢 <strong>"Project X of 5"</strong> counter</li>
+            <li>➡️ <strong>Arrow navigation</strong> between projects</li>
+            <li>❌ <strong>Close button</strong> or press ESC</li>
+        </ul>
+    </div>
+    
+    <div class="test-grid">
+        
+        <div class="test-item">
+            <a href="./assets/images/portfolio1.jpg" 
+               data-lightbox="test-gallery" 
+               data-title="🤖 Autonomous Gantry Robot | This robotic gantry system autonomously navigates greenhouse environments to perform high-resolution 3D scanning of lettuce crops. Built with Python, ROS, OpenCV, and LIDAR sensors for precision agricultural research.">
+                <img src="./assets/images/portfolio1.jpg" alt="Gantry Robot">
+            </a>
+            <h3>Gantry Robot</h3>
+            <p>Click to test lightbox!</p>
+        </div>
+
+        <div class="test-item">
+            <a href="./assets/images/portfolio2.jpg" 
+               data-lightbox="test-gallery"
+               data-title="🚀 NASA Life Support Sensors | Calibrated environmental monitoring sensors for NASA's controlled environment agriculture systems. Critical for astronaut food security during long-duration space missions.">
+                <img src="./assets/images/portfolio2.jpg" alt="NASA Sensors">
+            </a>
+            <h3>NASA Sensors</h3>
+            <p>Click to test lightbox!</p>
+        </div>
+
+        <div class="test-item">
+            <a href="./assets/images/portfolio3.jpg" 
+               data-lightbox="test-gallery"
+               data-title="🌱 Smart Hydroponic System | Automated hydroponic growing system with real-time monitoring of nutrients, pH, and lighting. Uses IoT sensors and machine learning for optimal plant growth.">
+                <img src="./assets/images/portfolio3.jpg" alt="Hydroponic System">
+            </a>
+            <h3>Hydroponic System</h3>
+            <p>Click to test lightbox!</p>
+        </div>
+
+        <div class="test-item">
+            <a href="./assets/images/portfolio4.jpg" 
+               data-lightbox="test-gallery"
+               data-title="🔍 Computer Vision Analysis | Machine learning models for plant disease detection and yield prediction. Processes thousands of images to identify stress indicators before they're visible to humans.">
+                <img src="./assets/images/portfolio4.jpg" alt="Computer Vision">
+            </a>
+            <h3>Computer Vision</h3>
+            <p>Click to test lightbox!</p>
+        </div>
+
+        <div class="test-item">
+            <a href="./assets/images/portfolio5.jpg" 
+               data-lightbox="test-gallery"
+               data-title="🏢 Research Platform | Comprehensive platform for studying plant responses to environmental conditions. Used for space agriculture and sustainable food production research.">
+                <img src="./assets/images/portfolio5.jpg" alt="Research Platform">
+            </a>
+            <h3>Research Platform</h3>
+            <p>Click to test lightbox!</p>
+        </div>
+        
+    </div>
+
+    <div class="instruction">
+        <h2>🐛 Still Not Working?</h2>
+        <p>Open browser Dev Tools (F12) and check the Console tab for error messages.</p>
+        <button onclick="debugTest()" style="background: #28e98c; color: black; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+            Run Debug Test
+        </button>
+    </div>
+
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/lightbox.min.js"></script>
+    
+    <script>
+        $(document).ready(function() {
+            console.log('🧪 Test page loaded!');
+            
+            if (typeof lightbox !== 'undefined') {
+                console.log('✅ Lightbox is available!');
+                lightbox.option({
+                    'wrapAround': true,
+                    'albumLabel': "Project %1 of %2"
+                });
+            } else {
+                console.error('❌ Lightbox not found!');
+            }
+        });
+        
+        function debugTest() {
+            console.log('=== LIGHTBOX DEBUG TEST ===');
+            console.log('jQuery loaded:', typeof $ !== 'undefined');
+            console.log('Lightbox loaded:', typeof lightbox !== 'undefined');
+            console.log('Images found:', $('a[data-lightbox]').length);
+            console.log('===========================');
+            alert('Check the browser console (F12) for debug info!');
+        }
+    </script>
+</body>
+</html>
