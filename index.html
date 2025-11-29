@@ -118,147 +118,6 @@
             }
         }
 
-        /* Portfolio categories hover effect */
-        .portfolio-categories li a:hover {
-            color: var(--primary_color);
-            transition: color 0.3s ease;
-        }
-
-        /* Portfolio item hover effects */
-        .portfolio-item-inner {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .portfolio-item-inner::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(40, 233, 140, 0.8);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1;
-            pointer-events: none;
-            /* This allows clicks to pass through! */
-        }
-
-        .portfolio-item-inner:hover::before {
-            opacity: 1;
-        }
-
-        .portfolio-item-inner::after {
-            content: 'View Details';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            color: white;
-            font-weight: 600;
-            font-size: 16px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .portfolio-item-inner:hover::after {
-            opacity: 1;
-        }
-    </style>
-
-    <style>
-        /* Enhanced lightbox caption styling */
-        .lb-caption {
-            font-size: 16px !important;
-            line-height: 1.6 !important;
-            padding: 25px 30px !important;
-            background: transparent !important;
-            color: #ffffff !important;
-            max-width: 800px !important;
-            max-height: 300px !important;
-            margin: 15px auto !important;
-            border-radius: 8px !important;
-            box-shadow: none !important;
-            overflow-y: auto !important;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8) !important;
-        }
-
-        /* Make sure lightbox captions are readable */
-        .lb-caption strong {
-            color: #28e98c !important;
-            font-weight: 600 !important;
-            font-size: 18px !important;
-        }
-
-        /* Make lightbox navigation arrows more visible */
-        .lb-nav a.lb-prev,
-        .lb-nav a.lb-next {
-            width: 50px !important;
-            height: 50px !important;
-            background: rgba(40, 233, 140, 0.8) !important;
-            border-radius: 50% !important;
-            opacity: 0.9 !important;
-            transition: all 0.3s ease !important;
-            position: absolute !important;
-            top: 50% !important;
-            transform: translateY(-50%) !important;
-            z-index: 10 !important;
-        }
-
-        .lb-nav a.lb-prev {
-            left: -70px !important;
-        }
-
-        .lb-nav a.lb-next {
-            right: -70px !important;
-        }
-
-        .lb-nav a.lb-prev:hover,
-        .lb-nav a.lb-next:hover {
-            opacity: 1 !important;
-            background: rgba(40, 233, 140, 1) !important;
-            transform: translateY(-50%) scale(1.1) !important;
-        }
-
-        /* Arrow icons */
-        .lb-nav a.lb-prev::before {
-            content: '‹' !important;
-            font-size: 24px !important;
-            color: white !important;
-            position: absolute !important;
-            top: 50% !important;
-            left: 50% !important;
-            transform: translate(-50%, -50%) !important;
-            line-height: 1 !important;
-            font-weight: bold !important;
-        }
-
-        .lb-nav a.lb-next::before {
-            content: '›' !important;
-            font-size: 24px !important;
-            color: white !important;
-            position: absolute !important;
-            top: 50% !important;
-            left: 50% !important;
-            transform: translate(-50%, -50%) !important;
-            line-height: 1 !important;
-            font-weight: bold !important;
-        }
-
-        /* Make sure navigation is visible on smaller screens */
-        @media (max-width: 768px) {
-            .lb-nav a.lb-prev {
-                left: 10px !important;
-            }
-
-            .lb-nav a.lb-next {
-                right: 10px !important;
-            }
-        }
-
         /* 
            FIX: Decouple text width from image size.
            1. Force a fixed width for the container so text is always consistent.
@@ -363,259 +222,204 @@
 
 <body class="home1-page">
 
-    <<<<<<< HEAD <video class="body-overlay" muted autoplay loop>
-        =======
-        <video class="body-overlay" muted autoplay loop>
-            >>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
-            <source src="./assets/images/forest1.mp4" type="video/mp4">
-        </video>
+    <video class="body-overlay" muted autoplay loop>
+        <source src="./assets/images/forest1.mp4" type="video/mp4">
+    </video>
 
-        <!-- Preloader -->
-        <div class="page-loader">
-            <div class="bounceball"></div>
+    <!-- Preloader -->
+    <div class="page-loader">
+        <div class="bounceball"></div>
+    </div>
+
+    <span class="icon-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </span>
+
+    <!-- Side Menu Bar -->
+    <div class="responsive-sidebar-menu">
+        <div class="overlay"></div>
+        <div class="sidebar-menu-inner">
+            <div class="menu-wrap">
+                <p>Menu</p>
+                <ul class="menu scroll-nav-responsive d-flex">
+                    <li>
+                        <a class="scroll-to" href="#home">
+                            <i class="las la-home"></i> <span>Home</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="scroll-to" href="#about">
+                            <i class="lar la-user"></i> <span>About</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="scroll-to" href="#resume">
+                            <i class="las la-briefcase"></i> <span>Resume</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="scroll-to" href="#portfolio">
+                            <i class="las la-grip-vertical"></i> <span>Portfolios</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="scroll-to" href="#skills">
+                            <i class="las la-shapes"></i> <span>Skills</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="scroll-to" href="#contact">
+                            <i class="las la-envelope"></i> <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="sidebar-social">
+                <p>Social</p>
+                <ul class="social-links d-flex align-items-center">
+                    <li>
+                        <a href="https://www.linkedin.com/in/mario-molina-226628256/"><i
+                                class="lab la-linkedin"></i></a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/marioblue5"><i class="lab la-github"></i></a>
+                    </li>
+                </ul>
+            </div>
         </div>
+    </div>
 
-        <span class="icon-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-        </span>
+    <ul class="menu scroll-nav d-flex">
+        <li>
+            <a class="scroll-to" href="#home">
+                <span>Home</span> <i class="las la-home"></i>
+            </a>
+        </li>
+        <li>
+            <a class="scroll-to" href="#about">
+                <span>About</span> <i class="lar la-user"></i>
+            </a>
+        </li>
+        <li>
+            <a class="scroll-to" href="#resume">
+                <span>Resume</span> <i class="las la-briefcase"></i>
+            </a>
+        </li>
+        <li>
+            <a class="scroll-to" href="#services">
+                <span>Services</span> <i class="las la-stream"></i>
+            </a>
+        </li>
+        <li>
+            <a class="scroll-to" href="#portfolio">
+                <span>Portfolios</span> <i class="las la-grip-vertical"></i>
+            </a>
+        </li>
+        <li>
+            <a class="scroll-to" href="#skills">
+                <span>Skills</span> <i class="las la-shapes"></i>
+            </a>
+        </li>
+        <li>
+            <a class="scroll-to" href="#contact">
+                <span>Contact</span> <i class="las la-envelope"></i>
+            </a>
+        </li>
+    </ul>
 
-        <!-- Side Menu Bar -->
-        <div class="responsive-sidebar-menu">
-            <div class="overlay"></div>
-            <div class="sidebar-menu-inner">
-                <div class="menu-wrap">
-                    <p>Menu</p>
-                    <ul class="menu scroll-nav-responsive d-flex">
-                        <li>
-                            <a class="scroll-to" href="#home">
-                                <i class="las la-home"></i> <span>Home</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="scroll-to" href="#about">
-                                <i class="lar la-user"></i> <span>About</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="scroll-to" href="#resume">
-                                <i class="las la-briefcase"></i> <span>Resume</span>
-                            </a>
-                        </li>
-                        <li>
-                            <<<<<<< HEAD=======<a class="scroll-to" href="#skills">
-                                <i class="las la-shapes"></i> <span>Skills</span>
-                                </a>
-                        </li>
-                        <li>
-                            >>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
-                            <a class="scroll-to" href="#portfolio">
-                                <i class="las la-grip-vertical"></i> <span>Portfolios</span>
-                            </a>
-                        </li>
-                        <li>
-                            <<<<<<< HEAD <a class="scroll-to" href="#skills">
-                                <i class="las la-shapes"></i> <span>Skills</span>
-                                </a>
-                        </li>
-                        <li>
-                            =======
-                            >>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
-                            <a class="scroll-to" href="#contact">
-                                <i class="las la-envelope"></i> <span>Contact</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+    <div class="left-sidebar">
+        <div class="sidebar-header d-flex align-items-center justify-content-between">
+            <img src="./assets/images/logo.png" alt="Logo">
+            <span class="designation">Biosystems & Electrical Engineer</span>
+        </div>
+        <img class="me" src="./assets/images/headshot.jpg" alt="Me">
+        <h2 class="email">pmariolmolina@gmail.com</h2>
+        <ul class="social-profile d-flex align-items-center flex-wrap justify-content-center">
+            <li>
+                <a href="https://www.linkedin.com/in/mario-molina-226628256/"><i class="lab la-linkedin"></i></a>
+            </li>
+            <li>
+                <a href="https://github.com/marioblue5"><i class="lab la-github"></i></a>
+            </li>
+        </ul>
+    </div>
+    <!-- Main Section -->
+    <main class="drake-main">
+        <div id="smooth-wrapper">
+            <div id="smooth-content">
 
-                <div class="sidebar-social">
-                    <p>Social</p>
-                    <ul class="social-links d-flex align-items-center">
+                <div class="left-sidebar">
+                    <div class="sidebar-header d-flex align-items-center justify-content-between">
+                        <img src="./assets/images/logo.png" alt="Logo">
+                        <span class="designation">Biosystems & Computer Vision Engineer</span>
+                    </div>
+                    <img class="me" src="./assets/images/headshot.jpg" alt="Me">
+                    <h2 class="email">pmariolmolina@gmail.com</h2>
+                    <ul class="social-profile d-flex align-items-center flex-wrap justify-content-center">
                         <li>
-                            <<<<<<< HEAD <a href="https://www.linkedin.com/in/mario-molina-226628256/"><i
+                            <a href="https://www.linkedin.com/in/mario-molina-226628256/"><i
                                     class="lab la-linkedin"></i></a>
-                                =======
-                                <a href="https://www.linkedin.com/in/mario-molina-226628256/"><i
-                                        class="lab la-linkedin"></i></a>
-                                >>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
                         </li>
                         <li>
                             <a href="https://github.com/marioblue5"><i class="lab la-github"></i></a>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </div>
 
-        <ul class="menu scroll-nav d-flex">
-            <li>
-                <a class="scroll-to" href="#home">
-                    <span>Home</span> <i class="las la-home"></i>
-                </a>
-            </li>
-            <li>
-                <a class="scroll-to" href="#about">
-                    <span>About</span> <i class="lar la-user"></i>
-                </a>
-            </li>
-            <li>
-                <a class="scroll-to" href="#resume">
-                    <span>Resume</span> <i class="las la-briefcase"></i>
-                </a>
-            </li>
-            <li>
-                <a class="scroll-to" href="#services">
-                    <span>Services</span> <i class="las la-stream"></i>
-                </a>
-            </li>
-            <li>
-                <a class="scroll-to" href="#portfolio">
-                    <span>Portfolios</span> <i class="las la-grip-vertical"></i>
-                </a>
-            </li>
-            <li>
-                <<<<<<< HEAD <a class="scroll-to" href="#skills">
-                    <span>Skills</span> <i class="las la-shapes"></i>
-                    </a>
-            </li>
-            <li>
-                =======
-                >>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
-                <a class="scroll-to" href="#contact">
-                    <span>Contact</span> <i class="las la-envelope"></i>
-                </a>
-            </li>
-        </ul>
+                <!-- Hero Section -->
+                <section class="hero-section page-section scroll-to-page" id="home">
 
-        <div class="left-sidebar">
-            <div class="sidebar-header d-flex align-items-center justify-content-between">
-                <img src="./assets/images/logo.png" alt="Logo">
-                <<<<<<< HEAD <span class="designation">Biosystems & Electrical Engineer</span>
-                    =======
-                    <span class="designation">Biosystems & Computer Vision Engineer</span>
-                    >>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
-            </div>
-            <img class="me" src="./assets/images/headshot.jpg" alt="Me">
-            <h2 class="email">pmariolmolina@gmail.com</h2>
-            <ul class="social-profile d-flex align-items-center flex-wrap justify-content-center">
-                <li>
-                    <a href="https://www.linkedin.com/in/mario-molina-226628256/"><i class="lab la-linkedin"></i></a>
-                </li>
-                <li>
-                    <a href="https://github.com/marioblue5"><i class="lab la-github"></i></a>
-                </li>
-            </ul>
-        </div>
-        <!-- Main Section -->
-        <main class="drake-main">
-            <div id="smooth-wrapper">
-                <div id="smooth-content">
+                    <div class="custom-container">
+                        <div class="hero-content content-width">
+                            <div class="section-header">
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="las la-home"></i> Introduce
+                                </h4>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom">Hi, I'm
+                                    <span>Mario</span>! Biosystems & Electrical Engineer
+                                </h1>
+                            </div>
+                            <p class="scroll-animation" data-animation="fade_from_bottom">I create and learn things, all
+                                the way from Hydroponics to Computer Vision Machine Learning and even PCB Design!</p>
+                            <a href="#portfolio" class="go-to-project-btn scroll-to scroll-animation"
+                                data-animation="rotate_up">
+                                <img src="./assets/images/round-text.png" alt="Rounded Text">
+                                <i class="las la-arrow-down"></i>
+                            </a>
 
-                    <div class="left-sidebar">
-                        <div class="sidebar-header d-flex align-items-center justify-content-between">
-                            <img src="./assets/images/logo.png" alt="Logo">
-                            <span class="designation">Biosystems & Computer Vision Engineer</span>
-                        </div>
-                        <img class="me" src="./assets/images/headshot.jpg" alt="Me">
-                        <h2 class="email">pmariolmolina@gmail.com</h2>
-                        <ul class="social-profile d-flex align-items-center flex-wrap justify-content-center">
-                            <li>
-                                <<<<<<< HEAD <a href="https://www.linkedin.com/in/mario-molina-226628256/"><i
-                                        class="lab la-linkedin"></i></a>
-                                    =======
-                                    <a href="https://www.linkedin.com/in/mario-molina-226628256/"><i
-                                            class="lab la-linkedin"></i></a>
-                                    >>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
-                            </li>
-                            <li>
-                                <a href="https://github.com/marioblue5"><i class="lab la-github"></i></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                    <!-- Hero Section -->
-                    <section class="hero-section page-section scroll-to-page" id="home">
-
-                        <div class="custom-container">
-                            <div class="hero-content content-width">
-                                <div class="section-header">
-                                    <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                        <i class="las la-home"></i> Introduce
-                                    </h4>
-                                    <h1 class="scroll-animation" data-animation="fade_from_bottom">Hi, I'm
-                                        <span>Mario</span>! Biosystems & Electrical Engineer
+                            <div class="facts d-flex">
+                                <div class="left scroll-animation" data-animation="fade_from_right">
+                                    <h1>3+</h1>
+                                    <p>Years of experience </p>
+                                </div>
+                                <div class="right scroll-animation" data-animation="fade_from_right">
+                                    <h1>3x NASA Intern</h1>
+                                    <p>Space Crop Production</p>
+                                </div>
+                            </div>
+                            <div class="facts d-flex">
+                                <div class="left scroll-animation" data-animation="fade_from_right">
+                                    <h1 style="line-height: 1.1;">2025 National Preprofessional Engineer of the Year
                                     </h1>
-                                </div>
-                                <p class="scroll-animation" data-animation="fade_from_bottom">I create and learn things,
-                                    all
-                                    the way from Hydroponics to Computer Vision Machine Learning and even PCB Design!
-                                </p>
-                                <a href="#portfolio" class="go-to-project-btn scroll-to scroll-animation"
-                                    data-animation="rotate_up">
-                                    <img src="./assets/images/round-text.png" alt="Rounded Text">
-                                    <i class="las la-arrow-down"></i>
-                                </a>
 
-                                <div class="facts d-flex">
-                                    <div class="left scroll-animation" data-animation="fade_from_right">
-                                        <h1>3+</h1>
-                                        <p>Years of experience </p>
-                                    </div>
-                                    <div class="right scroll-animation" data-animation="fade_from_right">
-                                        <h1>3x NASA Intern</h1>
-                                        <p>Space Crop Production</p>
-                                    </div>
-                                </div>
-                                <div class="facts d-flex">
-                                    <div class="left scroll-animation" data-animation="fade_from_right">
-                                        <<<<<<< HEAD <h1 style="line-height: 1.1;">2025 National Preprofessional
-                                            Engineer of the Year
-                                            </h1>
-
-                                            <p>Awarded to me by the American Society of Agricultural and Biological
-                                                Engineers
-                                            </p>
-                                            =======
-                                            <h1 style="line-height: 1.1;">2025 National Preprofessional Engineer of the
-                                                Year</h1>
-
-                                            <p>Awarded to me by the American Society of Agricultural and Biological
-                                                Engineers</p>
-                                            >>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
-                                    </div>
+                                    <p>Awarded to me by the American Society of Agricultural and Biological Engineers
+                                    </p>
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </div>
+                </section>
 
-                    <!-- About Section -->
-                    <section class="about-area page-section scroll-to-page" id="about">
-                        <div class="custom-container">
-                            <div class="about-content content-width">
-                                <div class="section-header">
-                                    <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                        <i class="lar la-user"></i> About
-                                    </h4>
-                                    <<<<<<< HEAD <h1 class="scroll-animation" data-animation="fade_from_bottom"> Just an
-                                        engineer
-                                        passionate <br>about making
-                                        an <span>impact</span></h1>
-                                </div>
-                                <p class="scroll-animation" data-animation="fade_from_bottom">I'm Mario — an engineer
-                                    with
-                                    one foot
-                                    in plant science and the other in space tech. I've built autonomous gantry robots to
-                                    3-D
-                                    scan lettuce,
-                                    tuned life-support sensors for NASA-style grow chambers, and wrangled Python and
-                                    MATLAB
-                                    to turn messy data into
-                                    clean insights. When the soldering iron cools, you'll catch me volleying on the
-                                    court,
-                                    hunting vintage manga, or setting out on extra-long hikes. I thrive where nature,
-                                    tech,
-                                    and a dash of adventure collide.</p>
-                                =======
+                <!-- About Section -->
+                <section class="about-area page-section scroll-to-page" id="about">
+                    <div class="custom-container">
+                        <div class="about-content content-width">
+                            <div class="section-header">
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="lar la-user"></i> About
+                                </h4>
                                 <h1 class="scroll-animation" data-animation="fade_from_bottom"> Just an engineer
                                     passionate <br>about making
                                     an <span>impact</span></h1>
@@ -629,9 +433,8 @@
                                 clean insights. When the soldering iron cools, you'll catch me volleying on the court,
                                 hunting vintage manga, or setting out on extra-long hikes. I thrive where nature, tech,
                                 and a dash of adventure collide.</p>
-                            >>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
                         </div>
-                </div>
+                    </div>
                 </section>
 
                 <!-- Resume Section -->
@@ -649,15 +452,15 @@
 
                             <div class="resume-timeline">
                                 <div class="item scroll-animation" data-animation="fade_from_right">
-                                    <<<<<<< HEAD <span class="date">Sept 2025 - Present</span>
-                                        <h2>Field Engineer</h2>
-                                        <h3>Working to create the next best generation of autonomous robots</h3>
-                                        <ul>
-                                            <li>Leading field testing operations for autonomous tractors</li>
-                                            <li>Collaborating with software teams to debug perception systems</li>
-                                            <li>Managing on-site hardware repairs and maintenance</li>
-                                        </ul>
-                                        <p>Blue River Technology</p>
+                                    <span class="date">Sept 2025 - Present</span>
+                                    <h2>Field Engineer</h2>
+                                    <h3>Working to create the next best generation of autonomous robots</h3>
+                                    <ul>
+                                        <li>Leading field testing operations for autonomous tractors</li>
+                                        <li>Collaborating with software teams to debug perception systems</li>
+                                        <li>Managing on-site hardware repairs and maintenance</li>
+                                    </ul>
+                                    <p>Blue River Technology</p>
                                 </div>
                                 <div class="item scroll-animation" data-animation="fade_from_left">
                                     <span class="date">Jan 2025 - Present</span>
@@ -672,16 +475,12 @@
                                         <li>Engineering a sensor suite and dosing machine for hydroponics in
                                             microgravity aboard the ISS.</li>
                                     </ul>
-                                    =======
-                                    <span class="date">Jan 2025 - Present</span>
-                                    <h2>Prototype Engineer Intern</h2>
-                                    >>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
                                     <p>NASA: Space Crop Production</p>
                                 </div>
                                 <div class="item scroll-animation" data-animation="fade_from_right">
                                     <span class="date">Aug 2023 - Dec 2024</span>
                                     <h2>Robotics Research Engineer</h2>
-                                    <<<<<<< HEAD <ul>
+                                    <ul>
                                         <li>Engineered an autonomous gantry system with RGB-Depth cameras, LIDAR, Jetson
                                             Nano (CUDA), and
                                             ICP point cloud protocol to produce 3D point cloud reconstructions of live
@@ -689,8 +488,8 @@
                                         <li>Developed complex scripts for connecting open-source libraries (Open-3D,
                                             NeRF Studio).</li>
                                         <li>Constructed a carbon dioxide control system for the growth chamber.</li>
-                                        </ul>
-                                        <p>University of Florida, Correll Laboratory</p>
+                                    </ul>
+                                    <p>University of Florida, Correll Laboratory</p>
                                 </div>
                                 <div class="item scroll-animation" data-animation="fade_from_left">
                                     <span class="date">March 2022 - Dec 2023</span>
@@ -706,16 +505,6 @@
                                     <p>University of Florida, Fisher Laboratory</p>
                                 </div>
                                 <div class="item scroll-animation" data-animation="fade_from_right">
-                                    =======
-                                    <p>University of Florida</p>
-                                </div>
-                                <div class="item scroll-animation" data-animation="fade_from_right">
-                                    <span class="date">March 2021 - Dec 2023</span>
-                                    <h2>Controlled Environment Engineer</h2>
-                                    <p>University of Florida</p>
-                                </div>
-                                <div class="item scroll-animation" data-animation="fade_from_right">
-                                    >>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
                                     <span class="date">2021 - 2025</span>
                                     <h2>Bachelor Degree of Agricultural & Biological Engineering</h2>
                                     <h2> Minor in Electrical Engineering</h2>
@@ -726,502 +515,309 @@
                         </div>
                     </div>
                 </section>
-                <<<<<<< HEAD <!-- Enhanced Portfolio Section with Detailed Lightbox Captions -->
-                    <section class="portfolio-area page-section scroll-to-page" id="portfolio">
-                        <div class="custom-container">
-                            <div class="portfolio-content content-width">
-                                <div class="section-header">
-                                    <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                        <i class="las la-grip-vertical"></i> portfolio
-                                    </h4>
-                                    <h1 class="scroll-animation" data-animation="fade_from_bottom">Featured
-                                        <span>Projects</span>
-                                    </h1>
-                                </div>
-
-                                <div class="row portfolio-items">
-                                    <!-- Project 1: Autonomous Gantry Robot -->
-                                    <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
-                                        <div class="portfolio-item portfolio-full">
-                                            <div class="portfolio-item-inner">
-                                                <!-- Main visible image -->
-                                                <a href="./assets/images/STELLA_Lettuce.png" data-lightbox="STELLA"
-                                                    data-project-description="<strong>STELLA: Spatio-Temporal Evaluator for Lettuce Logistics Automation. STELLA is an autonomous gantry robot for 3D plant scanning</strong>
-                                                <br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems"
-                                                    data-title="Sensor Integration: Close-up of the LIDAR and camera systems.">
-                                                    <img src="./assets/images/STELLA_Lettuce.png"
-                                                        alt="STELLA: Spatio-Temporal Evaluator for Lettuce Logistics Automation">
-                                                </a>
-
-                                                <!-- Additional images for this project -->
-                                                <a href="./assets/images/STELLA_Full.png" data-lightbox="STELLA"
-                                                    data-project-description="<strong>STELLA: Spatio-Temporal Evaluator for Lettuce Logistics Automation.</strong><br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems"
-                                                    data-title="Sensor Integration: Close-up of the LIDAR and camera systems."
-                                                    style="display: none;"></a>
-
-                                                <a href="./assets/images/MovingLettuce.gif" data-lightbox="STELLA"
-                                                    data-project-description="<strong>STELLA: Spatio-Temporal Evaluator for Lettuce Logistics Automation.</strong><br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems"
-                                                    data-title="Field Testing: Robot operating in a real-world greenhouse setting."
-                                                    style="display: none;"></a>
-
-                                                <a href="./assets/images/PointCloud_lettuce.png" data-lightbox="STELLA"
-                                                    data-project-description="<strong>STELLA: Spatio-Temporal Evaluator for Lettuce Logistics Automation.</strong><br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems"
-                                                    data-title="Sensor Integration: Close-up of the LIDAR and camera systems."
-                                                    style="display: none;"></a>
-
-                                                <ul class="portfolio-categories">
-                                                    <li><a href="">Python</a></li>
-                                                    <li><a href="">ROS</a></li>
-                                                    <li><a href="">OpenCV</a></li>
-                                                    <li><a href="">LIDAR</a></li>
-                                                    <li><a href="">Embedded Systems</a></li>
-                                                    <li><a href="">Computer Vision</a></li>
-                                                    <li><a href="">ICP</a></li>
-                                                </ul>
-                                            </div>
-                                            <h2><a href="">STELLA: Spatio-Temporal Evaluator for Lettuce Logistics
-                                                    Automation</a></h2>
-                                        </div>
-                                    </div>
-
-                                    <!-- Project 4: Computer Vision Plant Analysis -->
-                                    <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
-                                        <div class="portfolio-item portfolio-half">
-                                            <div class="portfolio-item-inner">
-                                                <!-- Main visible image -->
-                                                <a href="./assets/images/portfolio4.jpg" data-lightbox="computer-vision"
-                                                    data-project-description="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing"
-                                                    data-title="Image Processing Pipeline: Automated analysis workflow.">
-                                                    <img src="./assets/images/portfolio4.jpg"
-                                                        alt="Computer Vision Plant Analysis">
-                                                </a>
-
-                                                <!-- Hidden additional images -->
-                                                <a href="./assets/images/portfolio2.jpg" data-lightbox="computer-vision"
-                                                    data-project-description="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing"
-                                                    data-title="Feature Extraction: Identifying key plant characteristics."
-                                                    style="display: none;"></a>
-
-                                                <a href="./assets/images/portfolio5.jpg" data-lightbox="computer-vision"
-                                                    data-project-description="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing"
-                                                    data-title="Health Analysis: Heatmap showing plant stress levels."
-                                                    style="display: none;"></a>
-
-                                                <a href="./assets/images/portfolio3.jpg" data-lightbox="computer-vision"
-                                                    data-project-description="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing"
-                                                    data-title="Growth Tracking: Time-lapse analysis of plant development."
-                                                    style="display: none;"></a>
-
-                                                <ul class="portfolio-categories">
-                                                    <li><a href="">Computer Vision</a></li>
-                                                    <li><a href="">Machine Learning</a></li>
-                                                    <li><a href="">Image Processing</a></li>
-                                                </ul>
-                                            </div>
-                                            <h2><a href="">Computer Vision Plant Phenotyping System</a></h2>
-                                        </div>
-                                    </div>
-
-                                    <!-- Project 5: Controlled Environment Research -->
-                                    <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
-                                        <div class="portfolio-item portfolio-half">
-                                            <div class="portfolio-item-inner">
-                                                <!-- Main visible image -->
-                                                <a href="./assets/images/portfolio5.jpg"
-                                                    data-lightbox="research-platform"
-                                                    data-project-description="<strong>🏢 Controlled Environment Agriculture Research Platform</strong><br><br>A comprehensive research facility designed for studying plant responses to various environmental conditions. This state-of-the-art platform enables precise control and monitoring of growing parameters to optimize agricultural outcomes for both terrestrial and space applications.<br><br>Research Capabilities:<br>• Precision climate control and monitoring<br>• Advanced data collection and analysis<br>• Real-time plant physiological tracking<br>• Environmental parameter optimization<br><br>Technologies: Environmental Control, Data Analysis, Research Systems"
-                                                    data-title="Facility Overview: The main research area.">
-                                                    <img src="./assets/images/portfolio5.jpg"
-                                                        alt="Controlled Environment Research">
-                                                </a>
-
-                                                <!-- Hidden additional images -->
-                                                <a href="./assets/images/portfolio1.jpg"
-                                                    data-lightbox="research-platform"
-                                                    data-project-description="<strong>🏢 Controlled Environment Agriculture Research Platform</strong><br><br>A comprehensive research facility designed for studying plant responses to various environmental conditions. This state-of-the-art platform enables precise control and monitoring of growing parameters to optimize agricultural outcomes for both terrestrial and space applications.<br><br>Research Capabilities:<br>• Precision climate control and monitoring<br>• Advanced data collection and analysis<br>• Real-time plant physiological tracking<br>• Environmental parameter optimization<br><br>Technologies: Environmental Control, Data Analysis, Research Systems"
-                                                    data-title="Climate Control: Precision environmental regulation units."
-                                                    style="display: none;"></a>
-
-                                                <a href="./assets/images/portfolio3.jpg"
-                                                    data-lightbox="research-platform"
-                                                    data-project-description="<strong>🏢 Controlled Environment Agriculture Research Platform</strong><br><br>A comprehensive research facility designed for studying plant responses to various environmental conditions. This state-of-the-art platform enables precise control and monitoring of growing parameters to optimize agricultural outcomes for both terrestrial and space applications.<br><br>Research Capabilities:<br>• Precision climate control and monitoring<br>• Advanced data collection and analysis<br>• Real-time plant physiological tracking<br>• Environmental parameter optimization<br><br>Technologies: Environmental Control, Data Analysis, Research Systems"
-                                                    data-title="Plant Response: Monitoring physiological changes in crops."
-                                                    style="display: none;"></a>
-
-                                                <ul class="portfolio-categories">
-                                                    <li><a href="">Environmental Control</a></li>
-                                                    <li><a href="">Data Analysis</a></li>
-                                                    <li><a href="">Research</a></li>
-                                                </ul>
-                                            </div>
-                                            <h2><a href="">Controlled Environment Research Platform</a></h2>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </section>
-
-                    =======
 
 
-                    >>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
-                    <!-- Skills Section -->
-                    <section class="skills-area page-section scroll-to-page" id="skills">
-                        <div class="custom-container">
-                            <div class="skills-content content-width">
-                                <div class="section-header">
-                                    <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                        <i class="las la-shapes"></i> my skills
-                                    </h4>
-                                    <h1 class="scroll-animation" data-animation="fade_from_bottom">My
-                                        <span>Advantages</span>
-                                    </h1>
-                                </div>
-
-                                <div class="row skills text-center">
-                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
-                                        <div class="skill">
-                                            <div class="skill-inner">
-                                                <img src="./assets/images/figma.png" alt="Figma">
-                                            </div>
-                                            <p class="name">Python</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_bottom">
-                                        <div class="skill">
-                                            <div class="skill-inner">
-                                                <img src="./assets/images/framer.png" alt="Framer">
-                                            </div>
-                                            <p class="name">Matlab</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_top">
-                                        <div class="skill">
-                                            <div class="skill-inner">
-                                                <img src="./assets/images/webflow.png" alt="Webflow">
-                                            </div>
-                                            <p class="name">Git</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_right">
-                                        <div class="skill">
-                                            <div class="skill-inner">
-                                                <img src="./assets/images/react.png" alt="React">
-                                            </div>
-                                            <p class="name">SLAM</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
-                                        <div class="skill">
-                                            <div class="skill-inner">
-                                                <img src="./assets/images/wordpress.png" alt="WordPress">
-                                            </div>
-                                            <p class="name">Oscilloscopes</p>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3 scroll-animation" data-animation="fade_from_bottom">
-                                        <div class="skill">
-                                            <div class="skill-inner">
-                                                <img src="./assets/images/laravel.png" alt="Laravel/PHP">
-                                            </div>
-                                            <p class="name">Embedded Systems</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <<<<<<< HEAD </div>
-                            </div>
-                    </section>
-
-
-
-
-                    =======
-
-            </div>
-            </div>
-            </section>
-
-            <!-- Enhanced Portfolio Section with Detailed Lightbox Captions -->
-            <section class="portfolio-area page-section scroll-to-page" id="portfolio">
-                <div class="custom-container">
-                    <div class="portfolio-content content-width">
-                        <div class="section-header">
-                            <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                <i class="las la-grip-vertical"></i> portfolio
-                            </h4>
-                            <h1 class="scroll-animation" data-animation="fade_from_bottom">Featured
-                                <span>Projects</span></h1>
-                        </div>
-
-                        <div class="row portfolio-items">
-                            <!-- Project 1: Autonomous Gantry Robot -->
-                            <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
-                                <div class="portfolio-item portfolio-full">
-                                    <div class="portfolio-item-inner">
-                                        <!-- Main visible image -->
-                                        <a href="./assets/images/portfolio1.jpg" data-lightbox="gantry-robot"
-                                            data-title="<strong>🤖 Autonomous Gantry Robot for 3D Plant Scanning</strong><br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems">
-                                            <img src="./assets/images/portfolio1.jpg" alt="Autonomous Gantry Robot">
-                                        </a>
-
-                                        <!-- Additional images for this project (same description) -->
-                                        <a href="./assets/images/portfolio2.jpg" data-lightbox="gantry-robot"
-                                            data-title="<strong>🤖 Autonomous Gantry Robot for 3D Plant Scanning</strong><br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems"
-                                            style="display: none;"></a>
-
-                                        <a href="./assets/images/portfolio3.jpg" data-lightbox="gantry-robot"
-                                            data-title="<strong>🤖 Autonomous Gantry Robot for 3D Plant Scanning</strong><br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems"
-                                            style="display: none;"></a>
-
-                                        <a href="./assets/images/portfolio4.jpg" data-lightbox="gantry-robot"
-                                            data-title="<strong>🤖 Autonomous Gantry Robot for 3D Plant Scanning</strong><br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems"
-                                            style="display: none;"></a>
-
-                                        <ul class="portfolio-categories">
-                                            <li><a href="">Python</a></li>
-                                            <li><a href="">ROS</a></li>
-                                            <li><a href="">Computer Vision</a></li>
-                                            <li><a href="">SLAM</a></li>
-                                        </ul>
-                                    </div>
-                                    <h2><a href="">Autonomous Gantry Robot for 3D Plant Scanning</a></h2>
-                                </div>
-                            </div>
-
-                            <!-- Project 2: NASA Life Support Sensors -->
-                            <div class="col-md-6 scroll-animation" data-animation="fade_from_left">
-                                <div class="portfolio-item portfolio-half">
-                                    <div class="portfolio-item-inner">
-                                        <!-- Main visible image -->
-                                        <a href="./assets/images/portfolio2.jpg" data-lightbox="nasa-sensors"
-                                            data-title="<strong>🚀 NASA Space Crop Production - Life Support Sensors</strong><br><br>Critical environmental monitoring systems for NASA's controlled environment agriculture programs. These precision sensors ensure optimal growing conditions for space-based crop production, supporting long-duration missions and astronaut food security.<br><br>Key Responsibilities:<br>• Calibration of CO2, humidity, and pressure sensors<br>• Environmental control system optimization<br>• Data validation for space agriculture research<br>• Sensor reliability testing for extreme conditions<br><br>Technologies: Embedded Systems, Sensor Calibration, NASA Standards">
-                                            <img src="./assets/images/portfolio2.jpg" alt="NASA Life Support Sensors">
-                                        </a>
-
-                                        <!-- Additional images for NASA project (same description) -->
-                                        <a href="./assets/images/portfolio1.jpg" data-lightbox="nasa-sensors"
-                                            data-title="<strong>🚀 NASA Space Crop Production - Life Support Sensors</strong><br><br>Critical environmental monitoring systems for NASA's controlled environment agriculture programs. These precision sensors ensure optimal growing conditions for space-based crop production, supporting long-duration missions and astronaut food security.<br><br>Key Responsibilities:<br>• Calibration of CO2, humidity, and pressure sensors<br>• Environmental control system optimization<br>• Data validation for space agriculture research<br>• Sensor reliability testing for extreme conditions<br><br>Technologies: Embedded Systems, Sensor Calibration, NASA Standards"
-                                            style="display: none;"></a>
-
-                                        <a href="./assets/images/portfolio5.jpg" data-lightbox="nasa-sensors"
-                                            data-title="<strong>🚀 NASA Space Crop Production - Life Support Sensors</strong><br><br>Critical environmental monitoring systems for NASA's controlled environment agriculture programs. These precision sensors ensure optimal growing conditions for space-based crop production, supporting long-duration missions and astronaut food security.<br><br>Key Responsibilities:<br>• Calibration of CO2, humidity, and pressure sensors<br>• Environmental control system optimization<br>• Data validation for space agriculture research<br>• Sensor reliability testing for extreme conditions<br><br>Technologies: Embedded Systems, Sensor Calibration, NASA Standards"
-                                            style="display: none;"></a>
-
-                                        <ul class="portfolio-categories">
-                                            <li><a href="">NASA</a></li>
-                                            <li><a href="">Embedded Systems</a></li>
-                                            <li><a href="">Sensor Calibration</a></li>
-                                        </ul>
-                                    </div>
-                                    <h2><a href="">NASA Life Support Sensor Systems</a></h2>
-                                </div>
-                            </div>
-
-                            <!-- Project 3: Hydroponic Control System -->
-                            <div class="col-md-6 scroll-animation" data-animation="fade_from_right">
-                                <div class="portfolio-item portfolio-half">
-                                    <div class="portfolio-item-inner">
-                                        <!-- Main visible image -->
-                                        <a href="./assets/images/portfolio3.jpg" data-lightbox="hydroponic-system"
-                                            data-title="<strong>🌱 Advanced Hydroponic Control System</strong><br><br>A comprehensive smart agriculture platform that automates hydroponic growing operations through intelligent monitoring and control. This system optimizes plant growth conditions using IoT sensors, machine learning algorithms, and automated feedback controls.<br><br>System Features:<br>• Real-time nutrient and pH monitoring<br>• Automated environmental control systems<br>• Machine learning growth optimization<br>• Smart irrigation and lighting management<br><br>Technologies: IoT Sensors, MATLAB, Machine Learning, Control Systems">
-                                            <img src="./assets/images/portfolio3.jpg" alt="Hydroponic Control System">
-                                        </a>
-
-                                        <!-- Hidden additional images -->
-                                        <a href="./assets/images/portfolio4.jpg" data-lightbox="hydroponic-system"
-                                            data-title="<strong>🌱 Advanced Hydroponic Control System</strong><br><br>A comprehensive smart agriculture platform that automates hydroponic growing operations through intelligent monitoring and control. This system optimizes plant growth conditions using IoT sensors, machine learning algorithms, and automated feedback controls.<br><br>System Features:<br>• Real-time nutrient and pH monitoring<br>• Automated environmental control systems<br>• Machine learning growth optimization<br>• Smart irrigation and lighting management<br><br>Technologies: IoT Sensors, MATLAB, Machine Learning, Control Systems"
-                                            style="display: none;"></a>
-
-                                        <a href="./assets/images/portfolio1.jpg" data-lightbox="hydroponic-system"
-                                            data-title="<strong>🌱 Advanced Hydroponic Control System</strong><br><br>A comprehensive smart agriculture platform that automates hydroponic growing operations through intelligent monitoring and control. This system optimizes plant growth conditions using IoT sensors, machine learning algorithms, and automated feedback controls.<br><br>System Features:<br>• Real-time nutrient and pH monitoring<br>• Automated environmental control systems<br>• Machine learning growth optimization<br>• Smart irrigation and lighting management<br><br>Technologies: IoT Sensors, MATLAB, Machine Learning, Control Systems"
-                                            style="display: none;"></a>
-
-                                        <ul class="portfolio-categories">
-                                            <li><a href="">IoT</a></li>
-                                            <li><a href="">MATLAB</a></li>
-                                            <li><a href="">Machine Learning</a></li>
-                                        </ul>
-                                    </div>
-                                    <h2><a href="">Smart Hydroponic Control System</a></h2>
-                                </div>
-                            </div>
-
-                            <!-- Project 4: Computer Vision Plant Analysis -->
-                            <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
-                                <div class="portfolio-item portfolio-half">
-                                    <div class="portfolio-item-inner">
-                                        <!-- Main visible image -->
-                                        <a href="./assets/images/portfolio4.jpg" data-lightbox="computer-vision"
-                                            data-title="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing">
-                                            <img src="./assets/images/portfolio4.jpg"
-                                                alt="Computer Vision Plant Analysis">
-                                        </a>
-
-                                        <!-- Hidden additional images -->
-                                        <a href="./assets/images/portfolio2.jpg" data-lightbox="computer-vision"
-                                            data-title="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing"
-                                            style="display: none;"></a>
-
-                                        <a href="./assets/images/portfolio5.jpg" data-lightbox="computer-vision"
-                                            data-title="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing"
-                                            style="display: none;"></a>
-
-                                        <a href="./assets/images/portfolio3.jpg" data-lightbox="computer-vision"
-                                            data-title="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing"
-                                            style="display: none;"></a>
-
-                                        <ul class="portfolio-categories">
-                                            <li><a href="">Computer Vision</a></li>
-                                            <li><a href="">Machine Learning</a></li>
-                                            <li><a href="">Image Processing</a></li>
-                                        </ul>
-                                    </div>
-                                    <h2><a href="">Computer Vision Plant Phenotyping System</a></h2>
-                                </div>
-                            </div>
-
-                            <!-- Project 5: Controlled Environment Research -->
-                            <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
-                                <div class="portfolio-item portfolio-half">
-                                    <div class="portfolio-item-inner">
-                                        <!-- Main visible image -->
-                                        <a href="./assets/images/portfolio5.jpg" data-lightbox="research-platform"
-                                            data-title="<strong>🏢 Controlled Environment Agriculture Research Platform</strong><br><br>A comprehensive research facility designed for studying plant responses to various environmental conditions. This state-of-the-art platform enables precise control and monitoring of growing parameters to optimize agricultural outcomes for both terrestrial and space applications.<br><br>Research Capabilities:<br>• Precision climate control and monitoring<br>• Advanced data collection and analysis<br>• Real-time plant physiological tracking<br>• Environmental parameter optimization<br><br>Technologies: Environmental Control, Data Analysis, Research Systems">
-                                            <img src="./assets/images/portfolio5.jpg"
-                                                alt="Controlled Environment Research">
-                                        </a>
-
-                                        <!-- Hidden additional images -->
-                                        <a href="./assets/images/portfolio1.jpg" data-lightbox="research-platform"
-                                            data-title="<strong>🏢 Controlled Environment Agriculture Research Platform</strong><br><br>A comprehensive research facility designed for studying plant responses to various environmental conditions. This state-of-the-art platform enables precise control and monitoring of growing parameters to optimize agricultural outcomes for both terrestrial and space applications.<br><br>Research Capabilities:<br>• Precision climate control and monitoring<br>• Advanced data collection and analysis<br>• Real-time plant physiological tracking<br>• Environmental parameter optimization<br><br>Technologies: Environmental Control, Data Analysis, Research Systems"
-                                            style="display: none;"></a>
-
-                                        <a href="./assets/images/portfolio3.jpg" data-lightbox="research-platform"
-                                            data-title="<strong>🏢 Controlled Environment Agriculture Research Platform</strong><br><br>A comprehensive research facility designed for studying plant responses to various environmental conditions. This state-of-the-art platform enables precise control and monitoring of growing parameters to optimize agricultural outcomes for both terrestrial and space applications.<br><br>Research Capabilities:<br>• Precision climate control and monitoring<br>• Advanced data collection and analysis<br>• Real-time plant physiological tracking<br>• Environmental parameter optimization<br><br>Technologies: Environmental Control, Data Analysis, Research Systems"
-                                            style="display: none;"></a>
-
-                                        <ul class="portfolio-categories">
-                                            <li><a href="">Environmental Control</a></li>
-                                            <li><a href="">Data Analysis</a></li>
-                                            <li><a href="">Research</a></li>
-                                        </ul>
-                                    </div>
-                                    <h2><a href="">Controlled Environment Research Platform</a></h2>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            >>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
-            <!-- Contact Section -->
-            <section class="contact-area page-section scroll-content" id="contact">
-                <div class="custom-container">
-                    <div class="contact-content content-width">
-                        <div class="section-header">
-                            <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
-                                <i class="las la-dollar-sign"></i> contact
-                            </h4>
-                            <<<<<<< HEAD <h1 class="scroll-animation" data-animation="fade_from_bottom">Let's Talk
-                                <span>:)</span>
+                <!-- Enhanced Portfolio Section with Detailed Lightbox Captions -->
+                <section class="portfolio-area page-section scroll-to-page" id="portfolio">
+                    <div class="custom-container">
+                        <div class="portfolio-content content-width">
+                            <div class="section-header">
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="las la-grip-vertical"></i> portfolio
+                                </h4>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom">Featured
+                                    <span>Projects</span>
                                 </h1>
-                                =======
-                                <h1 class="scroll-animation" data-animation="fade_from_bottom">Let's Talk
-                                    <span>:)</span></h1>
-                                >>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
-                        </div>
-                        <h3 class="scroll-animation" data-animation="fade_from_bottom">pmariolmolina@gmail.com</h3>
-                        <p id="required-msg">* Marked fields are required to fill.</p>
-
-                        <form class="contact-form scroll-animation" data-animation="fade_from_bottom" method="POST"
-                            action="mailer.php">
-                            <div class="alert alert-success messenger-box-contact__msg" style="display: none"
-                                role="alert">
-                                Your message was sent successfully.
                             </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="input-group">
-                                        <label for="full-name">full Name <sup>*</sup></label>
-                                        <input type="text" name="full-name" id="full-name" placeholder="Your Full Name">
+
+                            <div class="row portfolio-items">
+                                <!-- Project 1: Autonomous Gantry Robot -->
+                                <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="portfolio-item portfolio-full">
+                                        <div class="portfolio-item-inner">
+                                            <!-- Main visible image -->
+                                            <a href="./assets/images/STELLA_Lettuce.png" data-lightbox="STELLA"
+                                                data-project-description="<strong>STELLA: Spatio-Temporal Evaluator for Lettuce Logistics Automation. STELLA is an autonomous gantry robot for 3D plant scanning</strong>
+                                                <br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems"
+                                                data-title="Sensor Integration: Close-up of the LIDAR and camera systems.">
+                                                <img src="./assets/images/STELLA_Lettuce.png"
+                                                    alt="STELLA: Spatio-Temporal Evaluator for Lettuce Logistics Automation">
+                                            </a>
+
+                                            <!-- Additional images for this project -->
+                                            <a href="./assets/images/STELLA_Full.png" data-lightbox="STELLA"
+                                                data-project-description="<strong>STELLA: Spatio-Temporal Evaluator for Lettuce Logistics Automation.</strong><br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems"
+                                                data-title="Sensor Integration: Close-up of the LIDAR and camera systems."
+                                                style="display: none;"></a>
+
+                                            <a href="./assets/images/MovingLettuce.gif" data-lightbox="STELLA"
+                                                data-project-description="<strong>STELLA: Spatio-Temporal Evaluator for Lettuce Logistics Automation.</strong><br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems"
+                                                data-title="Field Testing: Robot operating in a real-world greenhouse setting."
+                                                style="display: none;"></a>
+
+                                            <a href="./assets/images/PointCloud_lettuce.png" data-lightbox="STELLA"
+                                                data-project-description="<strong>STELLA: Spatio-Temporal Evaluator for Lettuce Logistics Automation.</strong><br><br>A sophisticated robotic system that autonomously navigates greenhouse environments to perform high-resolution 3D scanning of crops. This cutting-edge technology combines computer vision, robotics, and machine learning to revolutionize agricultural research and crop monitoring.<br><br>Key Capabilities:<br>• Autonomous navigation with obstacle avoidance<br>• High-precision 3D plant scanning and mapping<br>• Real-time data collection and analysis<br>• SLAM-based localization and path planning<br><br>Technologies: Python, ROS, OpenCV, LIDAR, Embedded Systems"
+                                                data-title="Sensor Integration: Close-up of the LIDAR and camera systems."
+                                                style="display: none;"></a>
+
+                                            <ul class="portfolio-categories">
+                                                <li><a href="">Python</a></li>
+                                                <li><a href="">ROS</a></li>
+                                                <li><a href="">OpenCV</a></li>
+                                                <li><a href="">LIDAR</a></li>
+                                                <li><a href="">Embedded Systems</a></li>
+                                                <li><a href="">Computer Vision</a></li>
+                                                <li><a href="">ICP</a></li>
+                                            </ul>
+                                        </div>
+                                        <h2><a href="">STELLA: Spatio-Temporal Evaluator for Lettuce Logistics
+                                                Automation</a></h2>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="input-group">
-                                        <label for="email">Email <sup>*</sup></label>
-                                        <input type="email" name="email" id="email" placeholder="Your email adress">
+
+                                <!-- Project 4: Computer Vision Plant Analysis -->
+                                <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="portfolio-item portfolio-half">
+                                        <div class="portfolio-item-inner">
+                                            <!-- Main visible image -->
+                                            <a href="./assets/images/portfolio4.jpg" data-lightbox="computer-vision"
+                                                data-project-description="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing"
+                                                data-title="Image Processing Pipeline: Automated analysis workflow.">
+                                                <img src="./assets/images/portfolio4.jpg"
+                                                    alt="Computer Vision Plant Analysis">
+                                            </a>
+
+                                            <!-- Hidden additional images -->
+                                            <a href="./assets/images/portfolio2.jpg" data-lightbox="computer-vision"
+                                                data-project-description="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing"
+                                                data-title="Feature Extraction: Identifying key plant characteristics."
+                                                style="display: none;"></a>
+
+                                            <a href="./assets/images/portfolio5.jpg" data-lightbox="computer-vision"
+                                                data-project-description="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing"
+                                                data-title="Health Analysis: Heatmap showing plant stress levels."
+                                                style="display: none;"></a>
+
+                                            <a href="./assets/images/portfolio3.jpg" data-lightbox="computer-vision"
+                                                data-project-description="<strong>🔍 Computer Vision for Plant Phenotyping</strong><br><br>Advanced machine learning platform that analyzes plant health and predicts agricultural outcomes using high-resolution imaging data. This cutting-edge system processes thousands of plant images to extract detailed insights for precision agriculture and research applications.<br><br>Core Capabilities:<br>• Automated plant growth pattern analysis<br>• Early disease detection and diagnosis<br>• Yield prediction modeling and forecasting<br>• Plant stress indicator identification<br><br>Technologies: Computer Vision, Machine Learning, Image Processing"
+                                                data-title="Growth Tracking: Time-lapse analysis of plant development."
+                                                style="display: none;"></a>
+
+                                            <ul class="portfolio-categories">
+                                                <li><a href="">Computer Vision</a></li>
+                                                <li><a href="">Machine Learning</a></li>
+                                                <li><a href="">Image Processing</a></li>
+                                            </ul>
+                                        </div>
+                                        <h2><a href="">Computer Vision Plant Phenotyping System</a></h2>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="input-group">
-                                        <label for="phone-number">phone <span>(optional)</span></label>
-                                        <input type="text" name="phone-number" id="phone-number"
-                                            placeholder="Your number phone">
+
+                                <!-- Project 5: Controlled Environment Research -->
+                                <div class="col-md-12 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="portfolio-item portfolio-half">
+                                        <div class="portfolio-item-inner">
+                                            <!-- Main visible image -->
+                                            <a href="./assets/images/portfolio5.jpg" data-lightbox="research-platform"
+                                                data-project-description="<strong>🏢 Controlled Environment Agriculture Research Platform</strong><br><br>A comprehensive research facility designed for studying plant responses to various environmental conditions. This state-of-the-art platform enables precise control and monitoring of growing parameters to optimize agricultural outcomes for both terrestrial and space applications.<br><br>Research Capabilities:<br>• Precision climate control and monitoring<br>• Advanced data collection and analysis<br>• Real-time plant physiological tracking<br>• Environmental parameter optimization<br><br>Technologies: Environmental Control, Data Analysis, Research Systems"
+                                                data-title="Facility Overview: The main research area.">
+                                                <img src="./assets/images/portfolio5.jpg"
+                                                    alt="Controlled Environment Research">
+                                            </a>
+
+                                            <!-- Hidden additional images -->
+                                            <a href="./assets/images/portfolio1.jpg" data-lightbox="research-platform"
+                                                data-project-description="<strong>🏢 Controlled Environment Agriculture Research Platform</strong><br><br>A comprehensive research facility designed for studying plant responses to various environmental conditions. This state-of-the-art platform enables precise control and monitoring of growing parameters to optimize agricultural outcomes for both terrestrial and space applications.<br><br>Research Capabilities:<br>• Precision climate control and monitoring<br>• Advanced data collection and analysis<br>• Real-time plant physiological tracking<br>• Environmental parameter optimization<br><br>Technologies: Environmental Control, Data Analysis, Research Systems"
+                                                data-title="Climate Control: Precision environmental regulation units."
+                                                style="display: none;"></a>
+
+                                            <a href="./assets/images/portfolio3.jpg" data-lightbox="research-platform"
+                                                data-project-description="<strong>🏢 Controlled Environment Agriculture Research Platform</strong><br><br>A comprehensive research facility designed for studying plant responses to various environmental conditions. This state-of-the-art platform enables precise control and monitoring of growing parameters to optimize agricultural outcomes for both terrestrial and space applications.<br><br>Research Capabilities:<br>• Precision climate control and monitoring<br>• Advanced data collection and analysis<br>• Real-time plant physiological tracking<br>• Environmental parameter optimization<br><br>Technologies: Environmental Control, Data Analysis, Research Systems"
+                                                data-title="Plant Response: Monitoring physiological changes in crops."
+                                                style="display: none;"></a>
+
+                                            <ul class="portfolio-categories">
+                                                <li><a href="">Environmental Control</a></li>
+                                                <li><a href="">Data Analysis</a></li>
+                                                <li><a href="">Research</a></li>
+                                            </ul>
+                                        </div>
+                                        <h2><a href="">Controlled Environment Research Platform</a></h2>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="input-group">
-                                        <label for="subject">subject <sup>*</sup></label>
-                                        <select name="subject" id="subject">
-                                            <option value="">Select a subject</option>
-                                            <option value="subject1">Job Application</option>
-                                            <option value="subject2">Tag-up</option>
-                                            <option value="subject3">Contracting</option>
-                                        </select>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Skills Section -->
+                <section class="skills-area page-section scroll-to-page" id="skills">
+                    <div class="custom-container">
+                        <div class="skills-content content-width">
+                            <div class="section-header">
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="las la-shapes"></i> my skills
+                                </h4>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom">My
+                                    <span>Advantages</span>
+                                </h1>
+                            </div>
+
+                            <div class="row skills text-center">
+                                <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
+                                    <div class="skill">
+                                        <div class="skill-inner">
+                                            <img src="./assets/images/figma.png" alt="Figma">
+                                        </div>
+                                        <p class="name">Python</p>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="input-group">
-                                        <label for="message">message</label>
-                                        <textarea name="message" id="message"
-                                            placeholder="Wrire your message here ..."></textarea>
+                                <div class="col-md-3 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="skill">
+                                        <div class="skill-inner">
+                                            <img src="./assets/images/framer.png" alt="Framer">
+                                        </div>
+                                        <p class="name">Matlab</p>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="input-group upload-attachment">
-                                        <div>
-                                            <label for="upload-attachment">
-                                                <i class="las la-cloud-upload-alt"></i> add an attachment
-                                                <input type="file" name="file" id="upload-attachment">
-                                            </label>
+                                <div class="col-md-3 scroll-animation" data-animation="fade_from_top">
+                                    <div class="skill">
+                                        <div class="skill-inner">
+                                            <img src="./assets/images/webflow.png" alt="Webflow">
+                                        </div>
+                                        <p class="name">Git</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 scroll-animation" data-animation="fade_from_right">
+                                    <div class="skill">
+                                        <div class="skill-inner">
+                                            <img src="./assets/images/react.png" alt="React">
+                                        </div>
+                                        <p class="name">SLAM</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 scroll-animation" data-animation="fade_from_left">
+                                    <div class="skill">
+                                        <div class="skill-inner">
+                                            <img src="./assets/images/wordpress.png" alt="WordPress">
+                                        </div>
+                                        <p class="name">Oscilloscopes</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 scroll-animation" data-animation="fade_from_bottom">
+                                    <div class="skill">
+                                        <div class="skill-inner">
+                                            <img src="./assets/images/laravel.png" alt="Laravel/PHP">
+                                        </div>
+                                        <p class="name">Embedded Systems</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+                <!-- Contact Section -->
+                <section class="contact-area page-section scroll-content" id="contact">
+                    <div class="custom-container">
+                        <div class="contact-content content-width">
+                            <div class="section-header">
+                                <h4 class="subtitle scroll-animation" data-animation="fade_from_bottom">
+                                    <i class="las la-dollar-sign"></i> contact
+                                </h4>
+                                <h1 class="scroll-animation" data-animation="fade_from_bottom">Let's Talk
+                                    <span>:)</span>
+                                </h1>
+                            </div>
+                            <h3 class="scroll-animation" data-animation="fade_from_bottom">pmariolmolina@gmail.com</h3>
+                            <p id="required-msg">* Marked fields are required to fill.</p>
+
+                            <form class="contact-form scroll-animation" data-animation="fade_from_bottom" method="POST"
+                                action="mailer.php">
+                                <div class="alert alert-success messenger-box-contact__msg" style="display: none"
+                                    role="alert">
+                                    Your message was sent successfully.
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <label for="full-name">full Name <sup>*</sup></label>
+                                            <input type="text" name="full-name" id="full-name"
+                                                placeholder="Your Full Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <label for="email">Email <sup>*</sup></label>
+                                            <input type="email" name="email" id="email" placeholder="Your email adress">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <label for="phone-number">phone <span>(optional)</span></label>
+                                            <input type="text" name="phone-number" id="phone-number"
+                                                placeholder="Your number phone">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="input-group">
+                                            <label for="subject">subject <sup>*</sup></label>
+                                            <select name="subject" id="subject">
+                                                <option value="">Select a subject</option>
+                                                <option value="subject1">Job Application</option>
+                                                <option value="subject2">Tag-up</option>
+                                                <option value="subject3">Contracting</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group">
+                                            <label for="message">message</label>
+                                            <textarea name="message" id="message"
+                                                placeholder="Wrire your message here ..."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group upload-attachment">
+                                            <div>
+                                                <label for="upload-attachment">
+                                                    <i class="las la-cloud-upload-alt"></i> add an attachment
+                                                    <input type="file" name="file" id="upload-attachment">
+                                                </label>
+
+                                            </div>
 
                                         </div>
-
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="input-group submit-btn-wrap">
+                                            <button class="theme-btn" name="submit" type="submit" id="submit-form">send
+                                                message</button>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="input-group submit-btn-wrap">
-                                        <button class="theme-btn" name="submit" type="submit" id="submit-form">send
-                                            message</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
+                            </form>
 
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
             </div>
-            </div>
-        </main>
+        </div>
+    </main>
 
 
-        <script src="./assets/js/jquery.js"></script>
-        <script src="./assets/js/bootstrap.bundle.min.js"></script>
-        <script src="./assets/js/owl.carousel.js"></script>
-        <script src="./assets/js/gsap.min.js"></script>
-        <script src="./assets/js/ScrollTrigger.min.js"></script>
-        <script src="./assets/js/ScrollToPlugin.min.js"></script>
-        <script src="./assets/js/lightbox.min.js"></script>
-        <script src="./assets/js/lightbox-init.js"></script>
-        <<<<<<< HEAD=======>>>>>>> 2bdcca2187a36d1e8911e0efbee751a8eee529df
-            <script src="./assets/js/main.js"></script>
-            <script src="./assets/js/ajax-form.js"></script>
-</body>
+    <script src="./assets/js/jquery.js"></script>
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/owl.carousel.js"></script>
+    <script src="./assets/js/gsap.min.js"></script>
+    <script src="./assets/js/ScrollTrigger.min.js"></script>
+    <script src="./assets/js/ScrollToPlugin.min.js"></script>
+    <script src="./assets/js/lightbox.min.js"></script>
+    <script src="./assets/js/lightbox-init.js"></script>
 
-</html>
+    <script src="./assets/js/main.js"></script>
