@@ -1528,6 +1528,11 @@ body .body-overlay {
     font-weight: 300;
 }
 
+.contact-area .contact-content .contact-form .input-group select option {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 .contact-area .contact-content .contact-form .input-group select:focus,
 .contact-area .contact-content .contact-form .input-group textarea:focus,
 .contact-area .contact-content .contact-form .input-group input:focus {
