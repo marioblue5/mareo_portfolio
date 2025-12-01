@@ -62,13 +62,15 @@
         }
         message.classList.remove('show');
 
-        form_data = $(this).serialize();
+        form_data = new FormData(this);
         // Netlify requires form-name to be sent in the body for AJAX submissions
-        form_data += '&form-name=contact';
+        form_data.append('form-name', 'contact');
         $.ajax({
             type: 'POST',
             url: form.attr('action'),
-            data: form_data
+            data: form_data,
+            processData: false,
+            contentType: false
         })
             .done(done_func)
             .fail(fail_func);
