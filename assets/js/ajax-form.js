@@ -20,7 +20,7 @@
     //     } else {
     //         message.classList.remove('show');
     //     }
-        
+
     //     return valid;
     // }
 
@@ -43,11 +43,11 @@
             message.fadeOut();
         }, 3000);
     }
-    
+
     form.submit(function (e) {
         e.preventDefault();
 
-        
+
         const message = document.getElementById('required-msg');
 
         const fullName = document.getElementById("full-name");
@@ -63,13 +63,15 @@
         message.classList.remove('show');
 
         form_data = $(this).serialize();
+        // Netlify requires form-name to be sent in the body for AJAX submissions
+        form_data += '&form-name=contact';
         $.ajax({
             type: 'POST',
             url: form.attr('action'),
             data: form_data
         })
-        .done(done_func)
-        .fail(fail_func);
+            .done(done_func)
+            .fail(fail_func);
     });
-    
+
 })(jQuery);
